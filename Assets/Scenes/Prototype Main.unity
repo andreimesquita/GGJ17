@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputTimeDelay: 0
+  inputLockDelay: 0
   timer: {fileID: 813336915}
 --- !u!1 &711294883
 GameObject:
@@ -462,6 +463,11 @@ Prefab:
       propertyPath: trailResolution
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114512191937800584, guid: 4e54778ab1b340144b611929d52418fa,
+        type: 2}
+      propertyPath: offsetLimitPos
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e54778ab1b340144b611929d52418fa, type: 2}
   m_IsPrefabParent: 0
@@ -508,6 +514,11 @@ Prefab:
         type: 2}
       propertyPath: trailResolution
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114871805033224606, guid: ce99fe63fb4aaed4a976bef109bb4a12,
+        type: 2}
+      propertyPath: offsetLimitPos
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce99fe63fb4aaed4a976bef109bb4a12, type: 2}

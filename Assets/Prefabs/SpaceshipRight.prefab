@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 65096665393586136}
   m_Layer: 9
   m_Name: SpaceshipRight
-  m_TagString: Untagged
+  m_TagString: Spaceship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

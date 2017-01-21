@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class EntitiesManager : MonoBehaviour
 {
@@ -13,4 +14,7 @@ public class EntitiesManager : MonoBehaviour
         spaceshipLeft.gameObject.SetActive(true);
         spaceshipRight.gameObject.SetActive(true);
     }
+    public SpaceshipMove spaceshipLeft;
+    public SpaceshipMove spaceshipRight;
+    public Text scoreText;
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class SpaceshipMove : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class SpaceshipMove : MonoBehaviour
     [SerializeField] private KeyCode keyCode;
     [SerializeField] private float direction;
     [SerializeField] private float maximumSteeringAngle;
-    
+
     private Vector2 directionVector;
     private Quaternion maximumSteeringQuaternion;
     private float currentVelocity;
@@ -49,8 +50,22 @@ public class SpaceshipMove : MonoBehaviour
 
         Quaternion lastRotation = this.transform.rotation;
         Quaternion deltaRotation = Quaternion.Slerp(lastRotation, maximumSteeringQuaternion, velocityRatio * steeringDumping);
-        
-        this.transform.position = deltaPosition;
+
+
+        Camera cam = Camera.main;
+        float height = 2f * cam.orthographicSize;
+        float width = height * cam.aspect;
+        float max = width * 0.5f;
+        float min = -max;
+        Vector3 position = this.transform.position;
+        position.x = Mathf.Clamp(deltaPosition.x, min, max);
+
+        if ((Math.Abs(position.x - max) < 0.001f) || Math.Abs(position.x - min) < 0.001f)
+        {
+            deltaRotation = Quaternion.identity;
+        }
+
+        this.transform.position = position;
         this.transform.rotation = deltaRotation;
     }
 

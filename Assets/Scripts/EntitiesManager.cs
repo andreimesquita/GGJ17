@@ -5,6 +5,7 @@ public class EntitiesManager : MonoBehaviour
 {
     public SpaceshipBehaviour spaceshipLeft;
     public SpaceshipBehaviour spaceshipRight;
+    public Text scoreText;
 
     public void RespawnPlayers()
     {
@@ -14,7 +15,5 @@ public class EntitiesManager : MonoBehaviour
         spaceshipLeft.gameObject.SetActive(true);
         spaceshipRight.gameObject.SetActive(true);
     }
-    public SpaceshipMove spaceshipLeft;
-    public SpaceshipMove spaceshipRight;
-    public Text scoreText;
+
 }

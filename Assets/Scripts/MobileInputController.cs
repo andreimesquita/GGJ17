@@ -31,7 +31,7 @@ public class MobileInputController : MonoBehaviour
 
         ToggleWaitingRightPressExecution();
 
-        timer.RegisterCallback(inputTimeDelay, GameManager.Instance.entities.spaceshipRight.ToggleDirection);
+        timer.RegisterCallback(inputTimeDelay, GameManager.Instance.entities.spaceshipRight.spaceshipMove.ToggleDirection);
         timer.RegisterCallback(inputLockDelay, ToggleWaitingRightPressExecution);
     }
 
@@ -41,7 +41,7 @@ public class MobileInputController : MonoBehaviour
 
         ToggleWaitingLeftPressExecution();
 
-        timer.RegisterCallback(inputTimeDelay, GameManager.Instance.entities.spaceshipLeft.ToggleDirection);
+        timer.RegisterCallback(inputTimeDelay, GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ToggleDirection);
         timer.RegisterCallback(inputLockDelay, ToggleWaitingLeftPressExecution);
     }
 

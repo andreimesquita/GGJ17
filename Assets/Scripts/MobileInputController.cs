@@ -12,11 +12,11 @@ public class MobileInputController : MonoBehaviour
 
     public void OnRightScreenPressed()
     {
-        timer.RegisterCallback(inputTimeDelay, GameManager.Instance.entities.spaceshipRight.ToggleDirection);
+        timer.RegisterCallback(inputTimeDelay, GameManager.Instance.entities.spaceshipRight.spaceshipMove.ToggleDirection);
     }
 
     public void OnLeftScreenPressed()
     {
-        timer.RegisterCallback(inputTimeDelay, GameManager.Instance.entities.spaceshipLeft.ToggleDirection);
+        timer.RegisterCallback(inputTimeDelay, GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ToggleDirection);
     }
 }

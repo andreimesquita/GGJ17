@@ -1,5 +1,6 @@
 ﻿using So;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Util;
 
@@ -71,7 +72,8 @@ public class CharacterSelectorManager : MonoBehaviour
         PlayerPrefs.SetInt(Constants.KEY_PLAYER_ONE_ID, spaceshipsSelected[0]);
         PlayerPrefs.SetInt(Constants.KEY_PLAYER_TWO_ID, spaceshipsSelected[1]);
 
-        //TODO: Change to the game scene
+        //Change to the game scene
+        SceneManager.LoadScene(1);
     }
 
     #endregion

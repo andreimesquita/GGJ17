@@ -8,8 +8,12 @@ public class SpaceshipBehaviour : MonoBehaviour
     [SerializeField] private int playerId;
     [SerializeField] private SpaceshipsListSo spaceshipsListSo;
 
+    public SpaceshipMove spaceshipMove;
+
     private void Awake()
     {
+        spaceshipMove = GetComponent<SpaceshipMove>();
+
         int selectedSpaceshipId;
 
         if (playerId == 0)
@@ -22,6 +26,8 @@ public class SpaceshipBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        GameManager.Instance.NotifyPlayerDead();
+
         this.gameObject.SetActive(false);
     }
 }

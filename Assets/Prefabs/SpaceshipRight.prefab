@@ -147,6 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerId: 1
   spaceshipsListSo: {fileID: 11400000, guid: b0141dbe46563744fb261b4c7cdbb9c3, type: 2}
+  spaceshipMove: {fileID: 114512191937800584}
 --- !u!114 &114753767549931216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -158,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab7d0d3b7ece9a46b4f31d54ab9f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailResolution: 5
+  trailResolution: 6
   offset: -1
   lagTime: 0.1
 --- !u!120 &120730219376713608

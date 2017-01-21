@@ -9,6 +9,6 @@ public class MobileInputController : MonoBehaviour
 
     public void OnLeftScreenPressed()
     {
-        GameManager.Instance.entities.spaceshipRight.ToggleDirection();
+        GameManager.Instance.entities.spaceshipLeft.ToggleDirection();
     }
 }

@@ -11,8 +11,8 @@ public class MobileInputController : MonoBehaviour
 
     private void Awake()
     {
-        this.inputTimeDelay = 0.16f;
-        this.inputLockDelay = 0.6f;
+        this.inputTimeDelay = 0.12f;
+        this.inputLockDelay = 0.35f;
     }
 
     private void ToggleWaitingRightPressExecution()

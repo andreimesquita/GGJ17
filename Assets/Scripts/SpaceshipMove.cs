@@ -1,56 +1,55 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 public class SpaceshipMove : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] private AnimationCurve accelerationCurve;
+    [SerializeField] private float maximumVelocity;
+    [SerializeField] private float minimumVelocity;
+    [SerializeField] private float accelerationRate;
+    [SerializeField] private float maximumSteeringAngle;
+    [SerializeField] private float direction;
+    [SerializeField] private float steeringDumping;
+
+    private Vector2 directionVector;
+    private Quaternion maximumSteeringQuaternion;
     private float currentVelocity;
 
-    [SerializeField]
-    private float defaultXVelocity = 10.0f;
-
-    private Vector3 currentPosition;
-
-    private float currentRotation;
-
-    private float currentRotationVelocity = 0.0f;
-
-    [SerializeField]
-    private float rotationVelocity = 200.0f;
-
-    [SerializeField]
-    private KeyCode toggleButton;
-
-    private void Start()
+    public void Awake()
     {
-        currentPosition = transform.position;
-        currentVelocity = defaultXVelocity;
-        currentRotation = 0.0f;
+        this.maximumVelocity = 8.0f;
+        this.minimumVelocity = 3.5f;
+        this.accelerationRate = 8.0f;
+        this.maximumSteeringAngle = 8.0f;
+        this.steeringDumping = 0.5f;
+
+        this.directionVector = new Vector2(direction, 0.0f);
+        this.maximumSteeringQuaternion = Quaternion.AngleAxis(maximumSteeringAngle, Vector3.forward);
     }
 
-    private void Update()
+    public void FixedUpdate()
     {
-        if (Input.GetKeyDown(toggleButton))
-        {
-            TogglePosition();
-        }
+        float velocityRatio = currentVelocity / maximumVelocity;
+        float velocityCurveEvaluation = accelerationCurve.Evaluate(velocityRatio);
+        float interpolatedVelocity = currentVelocity * velocityCurveEvaluation;
 
-        this.transform.position = Vector3.Slerp(this.transform.position, currentPosition, Time.deltaTime * 200.0f);
+        Vector2 lastPosition = this.transform.position;
+        Vector2 deltaPosition = lastPosition + interpolatedVelocity * directionVector * Time.deltaTime;
 
-        currentRotation += Time.deltaTime * currentRotationVelocity * rotationVelocity;
+        float deltaVelocity = currentVelocity + accelerationRate * Time.deltaTime;
+        this.currentVelocity = Mathf.Clamp(deltaVelocity, minimumVelocity, maximumVelocity);
 
-        currentRotation = Mathf.Clamp(currentRotation, -45.0f, 45.0f);
+        Quaternion lastRotation = this.transform.rotation;
+        Quaternion deltaRotation = Quaternion.Lerp(lastRotation, maximumSteeringQuaternion, velocityRatio * steeringDumping);
 
-        this.transform.localRotation = Quaternion.Euler(Vector3.forward * currentRotation);
+        this.transform.position = deltaPosition;
+        this.transform.rotation = deltaRotation;
     }
 
-    private void FixedUpdate()
+    public void ToggleDirection()
     {
-        currentPosition.x = Mathf.Lerp(currentPosition.x, Mathf.Clamp(currentPosition.x + currentVelocity * Time.fixedDeltaTime, -2.5f, 2.5f), Time.fixedDeltaTime * 20.0f);
-    }
-
-    public void TogglePosition()
-    {
-        currentVelocity = -currentVelocity;
-        currentRotationVelocity = -Mathf.Clamp(currentVelocity, -1, 1);
+        this.directionVector *= -1.0f;
+        this.maximumSteeringQuaternion = Quaternion.Inverse(maximumSteeringQuaternion);
+        currentVelocity = minimumVelocity;
     }
 }

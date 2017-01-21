@@ -14,6 +14,7 @@ public class GameHudManager : MonoBehaviour
 
     public void ShowGameOverHud()
     {
+        points.text = GameManager.Instance.entities.scoreText.text;
         gameOverPanel.gameObject.SetActive(true);
     }
 }

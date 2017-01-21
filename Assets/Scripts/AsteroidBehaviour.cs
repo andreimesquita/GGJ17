@@ -27,7 +27,22 @@ public class AsteroidBehaviour : MonoBehaviour
         }
 
         //TODO: shows up animation of the object being destroyed
+        
+        Destroy(this.gameObject);
+    }
 
+    private void OnEnable()
+    {
+        GameManager.Instance.GameOverNotification += AsteroidBehaviour_GameOverNotification;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Instance.GameOverNotification -= AsteroidBehaviour_GameOverNotification;
+    }
+
+    private void AsteroidBehaviour_GameOverNotification()
+    {
         Destroy(this.gameObject);
     }
 }

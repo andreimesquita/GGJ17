@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    public delegate void GameOverDelegate();
+
+    public event GameOverDelegate GameOverNotification;
+
     public EntitiesManager entities;
 
     public SpawnManager spawnManager;
@@ -38,6 +42,9 @@ public class GameManager : MonoBehaviour
     {
         spawnManager.enabled = false;
 
+        if (GameOverNotification != null)
+            GameOverNotification();
+
         gameHudManager.ShowGameOverHud();
     }
 
@@ -50,6 +57,8 @@ public class GameManager : MonoBehaviour
         entities.RespawnPlayers();
 
         DOVirtual.DelayedCall(5, () => { spawnManager.enabled = true; });
+
+        GameManager.Instance.entities.scoreText.text = "0";
     }
 
     public void ReturnToMainMenu()

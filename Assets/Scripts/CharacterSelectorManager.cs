@@ -51,5 +51,4 @@ public class CharacterSelectorManager : MonoBehaviour
     {
         spaceshipImages[id].sprite = spaceshipsSprites[spaceshipsSelected[id]];
     }
-
 }

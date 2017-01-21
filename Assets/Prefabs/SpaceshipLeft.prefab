@@ -79,10 +79,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a3ad32b26615b4e856045f86d42b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentVelocity: 0
-  defaultXVelocity: -5
-  rotationVelocity: 135
-  toggleButton: 276
+  accelerationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0.026234567
+      value: 0.014652013
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.09027747
+      value: 0.56958234
+      inSlope: 3.496024
+      outSlope: 3.496024
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.26789656
+      value: 0.89601505
+      inSlope: 0.45322663
+      outSlope: 0.45322663
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  maximumVelocity: 0
+  minimumVelocity: 0
+  accelerationRate: 0
+  maximumSteeringAngle: 0
+  direction: -1
+  steeringDumping: 0
 --- !u!114 &114975876123033672
 MonoBehaviour:
   m_ObjectHideFlags: 1

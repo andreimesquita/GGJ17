@@ -17,11 +17,11 @@ public class SpaceshipMove : MonoBehaviour
 
     public void Awake()
     {
-        this.maximumVelocity = 8.0f;
-        this.minimumVelocity = 3.5f;
+        this.maximumVelocity = 6.0f;
+        this.minimumVelocity = 1.0f;
         this.accelerationRate = 8.0f;
-        this.maximumSteeringAngle = 8.0f;
-        this.steeringDumping = 0.5f;
+        this.maximumSteeringAngle = 10.0f;
+        this.steeringDumping = 0.3f;
 
         this.directionVector = new Vector2(direction, 0.0f);
         this.maximumSteeringQuaternion = Quaternion.AngleAxis(maximumSteeringAngle, Vector3.forward);

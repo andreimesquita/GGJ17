@@ -2,13 +2,21 @@
 
 public class MobileInputController : MonoBehaviour
 {
+    [SerializeField] private float inputTimeDelay;
+    [SerializeField] private Timer timer;
+
+    private void Awake()
+    {
+        this.inputTimeDelay = 0.15f;
+    }
+
     public void OnRightScreenPressed()
     {
-        GameManager.Instance.entities.spaceshipRight.ToggleDirection();
+        timer.RegisterCallback(inputTimeDelay, GameManager.Instance.entities.spaceshipRight.ToggleDirection);
     }
 
     public void OnLeftScreenPressed()
     {
-        GameManager.Instance.entities.spaceshipLeft.ToggleDirection();
+        timer.RegisterCallback(inputTimeDelay, GameManager.Instance.entities.spaceshipLeft.ToggleDirection);
     }
 }

@@ -160,6 +160,7 @@ MonoBehaviour:
   steeringDumping: 0.5
   keyCode: 276
   direction: -1
+  maximumSteeringAngle: 60
 --- !u!120 &120518438347184792
 LineRenderer:
   m_ObjectHideFlags: 1

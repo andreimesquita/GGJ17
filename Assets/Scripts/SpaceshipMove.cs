@@ -1,5 +1,4 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpaceshipMove : MonoBehaviour
 {
@@ -10,20 +9,18 @@ public class SpaceshipMove : MonoBehaviour
     [SerializeField] private float steeringDumping;
     [SerializeField] private KeyCode keyCode;
     [SerializeField] private float direction;
-
-    private float maximumSteeringAngle;
+    [SerializeField] private float maximumSteeringAngle;
     
-
     private Vector2 directionVector;
     private Quaternion maximumSteeringQuaternion;
     private float currentVelocity;
+    private Timer timer;
 
     private void Awake()
     {
         this.maximumVelocity = 6.0f;
         this.minimumVelocity = 1.0f;
         this.accelerationRate = 8.0f;
-        this.maximumSteeringAngle = 60.0f;
         this.steeringDumping = 0.25f;
 
         this.directionVector = new Vector2(direction, 0.0f);

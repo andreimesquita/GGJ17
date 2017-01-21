@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a3ad32b26615b4e856045f86d42b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentVelocity: 0
+  currentVelocity: 5
   defaultXVelocity: 5
   rotationVelocity: 135
   toggleButton: 275
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab7d0d3b7ece9a46b4f31d54ab9f2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailResolution: 40
+  trailResolution: 10
   offset: -1
   lagTime: 0.1
 --- !u!120 &120431948582790044
@@ -110,7 +110,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 3faf70dcb032fe6418ccb29d905c981f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -129,8 +129,16 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 2.4999998, y: 0, z: 0.497}
+  - {x: 1.7928929, y: -0.7071067, z: 0.497}
+  - {x: 1.0857861, y: -1.4142134, z: 0.497}
+  - {x: 0.37867928, y: -2.1213202, z: 0.497}
+  - {x: -0.32842755, y: -2.8284268, z: 0.497}
+  - {x: -1.0355344, y: -3.5355334, z: 0.497}
+  - {x: -1.7426412, y: -4.24264, z: 0.497}
+  - {x: -2.449748, y: -4.9497466, z: 0.497}
+  - {x: -3.1568549, y: -5.656853, z: 0.497}
+  - {x: -3.8639617, y: -6.36396, z: 0.497}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 0.3
@@ -225,7 +233,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0.5, g: 0, b: 0, a: 1}
   m_FlipX: 0

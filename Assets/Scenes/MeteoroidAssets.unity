@@ -130,18 +130,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4912296204727358, guid: efeb9bb15a82532439a6b23b0ada6e62, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912296204727358, guid: efeb9bb15a82532439a6b23b0ada6e62, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912296204727358, guid: efeb9bb15a82532439a6b23b0ada6e62, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: efeb9bb15a82532439a6b23b0ada6e62, type: 2}
   m_IsPrefabParent: 0
@@ -271,59 +259,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 198234332103388232, guid: a0a4440ef3beffd46adf91cb4eaae2f4,
-        type: 2}
-      propertyPath: InitialModule.startSize.minCurve.m_Curve.Array.data[0].value
-      value: 0.33333337
-      objectReference: {fileID: 0}
-    - target: {fileID: 198234332103388232, guid: a0a4440ef3beffd46adf91cb4eaae2f4,
-        type: 2}
-      propertyPath: InitialModule.startSize.minCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198234332103388232, guid: a0a4440ef3beffd46adf91cb4eaae2f4,
-        type: 2}
-      propertyPath: randomSeed
-      value: -1226110335
-      objectReference: {fileID: 0}
-    - target: {fileID: 198234332103388232, guid: a0a4440ef3beffd46adf91cb4eaae2f4,
-        type: 2}
-      propertyPath: EmissionModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198234332103388232, guid: a0a4440ef3beffd46adf91cb4eaae2f4,
-        type: 2}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4161395488473528, guid: a0a4440ef3beffd46adf91cb4eaae2f4, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 198234332103388232, guid: a0a4440ef3beffd46adf91cb4eaae2f4,
-        type: 2}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 198234332103388232, guid: a0a4440ef3beffd46adf91cb4eaae2f4,
-        type: 2}
-      propertyPath: InitialModule.startSize.maxCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198234332103388232, guid: a0a4440ef3beffd46adf91cb4eaae2f4,
-        type: 2}
-      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198234332103388232, guid: a0a4440ef3beffd46adf91cb4eaae2f4,
-        type: 2}
-      propertyPath: ColorBySpeedModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4161395488473528, guid: a0a4440ef3beffd46adf91cb4eaae2f4, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0a4440ef3beffd46adf91cb4eaae2f4, type: 2}
   m_IsPrefabParent: 0
@@ -408,11 +343,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 33239245131940202, guid: cef6c88d3b293b24ca236bb128e247fd,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: a3605337237774b41a35498964c0e0a9, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cef6c88d3b293b24ca236bb128e247fd, type: 2}
   m_IsPrefabParent: 0

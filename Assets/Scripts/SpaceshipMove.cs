@@ -40,8 +40,6 @@ public class SpaceshipMove : MonoBehaviour
         currentRotation = Mathf.Clamp(currentRotation, -45.0f, 45.0f);
 
         this.transform.localRotation = Quaternion.Euler(Vector3.forward * currentRotation);
-
-            //Quaternion.Lerp(this.transform.localRotation, Quaternion.Euler(Vector3.forward * Mathf.Clamp(this.transform.localRotation.z, -180.0f, 180.0f)), Time.deltaTime); 
     }
 
     private void FixedUpdate()

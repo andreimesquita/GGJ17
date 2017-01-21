@@ -10,6 +10,7 @@ public class SpaceshipMove : MonoBehaviour
     [SerializeField] private float steeringDumping;
     [SerializeField] private KeyCode keyCode;
     [SerializeField] private float direction;
+    [SerializeField] private LineRenderer lineRenderer;
 
     private float maximumSteeringAngle;
     
@@ -55,6 +56,31 @@ public class SpaceshipMove : MonoBehaviour
         
         this.transform.position = deltaPosition;
         this.transform.rotation = deltaRotation;
+
+        //flip
+        Camera cam = Camera.main;
+        float height = 2f * cam.orthographicSize;
+        float width = height * cam.aspect;
+        Vector3 spaceshipPosition = this.transform.position;
+        float limit = width * 0.5f;
+        float offset = 0.5f;
+
+        if (spaceshipPosition.x > limit)
+        {
+            this.lineRenderer.enabled = false;
+            spaceshipPosition.x = -limit + offset;
+            this.transform.position = spaceshipPosition;
+        }
+        else if (spaceshipPosition.x < -limit)
+        {
+            this.lineRenderer.enabled = false;
+            spaceshipPosition.x = limit - offset;
+            this.transform.position = spaceshipPosition;
+        }
+        else
+        {
+            this.lineRenderer.enabled = true;
+        }
     }
 
     public void ToggleDirection()

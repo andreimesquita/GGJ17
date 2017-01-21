@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpaceshipMove : MonoBehaviour
 {
@@ -19,6 +17,9 @@ public class SpaceshipMove : MonoBehaviour
     [SerializeField]
     private float rotationVelocity = 200.0f;
 
+    [SerializeField]
+    private KeyCode toggleButton;
+
     private void Start()
     {
         currentPosition = transform.position;
@@ -28,7 +29,7 @@ public class SpaceshipMove : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(toggleButton))
         {
             TogglePosition();
         }
@@ -44,7 +45,7 @@ public class SpaceshipMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        currentPosition.x = Mathf.Lerp(currentPosition.x, Mathf.Clamp(currentPosition.x + currentVelocity * Time.fixedDeltaTime, -3.0f, 3.0f), Time.fixedDeltaTime * 20.0f);
+        currentPosition.x = Mathf.Lerp(currentPosition.x, Mathf.Clamp(currentPosition.x + currentVelocity * Time.fixedDeltaTime, -2.5f, 2.5f), Time.fixedDeltaTime * 20.0f);
     }
 
     public void TogglePosition()

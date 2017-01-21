@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class AsteroidBehaviour : MonoBehaviour
 {
     private new Rigidbody rigidbody;
+    private static float fallingVelocity = 2f;
 
     private void Awake()
     {
@@ -13,7 +14,7 @@ public class AsteroidBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidbody.velocity = Vector3.down * SpawnManager.fallingVelocity;
+        rigidbody.velocity = Vector3.down * fallingVelocity;
     }
 
     private void OnCollisionEnter(Collision other)

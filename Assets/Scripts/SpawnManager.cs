@@ -3,8 +3,6 @@ using Random = UnityEngine.Random;
 
 public class SpawnManager : MonoBehaviour
 {
-    public static float fallingVelocity = 12f;
-
     [SerializeField]
     private GameObject asteroidPrefab;
 

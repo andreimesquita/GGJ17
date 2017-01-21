@@ -130,6 +130,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4912296204727358, guid: efeb9bb15a82532439a6b23b0ada6e62, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912296204727358, guid: efeb9bb15a82532439a6b23b0ada6e62, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912296204727358, guid: efeb9bb15a82532439a6b23b0ada6e62, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: efeb9bb15a82532439a6b23b0ada6e62, type: 2}
   m_IsPrefabParent: 0
@@ -396,6 +408,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 33239245131940202, guid: cef6c88d3b293b24ca236bb128e247fd,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: a3605337237774b41a35498964c0e0a9, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cef6c88d3b293b24ca236bb128e247fd, type: 2}
   m_IsPrefabParent: 0

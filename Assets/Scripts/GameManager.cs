@@ -1,10 +1,14 @@
 ﻿using DG.Tweening;
+using So;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Util;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private AudioListSo audioListSo;
+    [SerializeField] private AudioSource audioSource;
+
     public static GameManager Instance { get; private set; }
 
     public delegate void GameOverDelegate();
@@ -49,6 +53,12 @@ public class GameManager : MonoBehaviour
         gameHudManager.ShowGameOverHud();
     }
 
+    public void OnResetGamePress()
+    {
+        audioSource.PlayOneShot(audioListSo.ClickClip);
+        ResetGame();
+    }
+
     public void ResetGame()
     {
         gameHudManager.HideGameOverHud();
@@ -64,6 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        audioSource.PlayOneShot(audioListSo.ClickClip);
         SceneManager.LoadScene(Constants.SCENE_ID_MAIN_MENU);
     }
 

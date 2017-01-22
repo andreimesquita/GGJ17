@@ -73,7 +73,7 @@ public class CharacterSelectorManager : MonoBehaviour
         PlayerPrefs.SetInt(Constants.KEY_PLAYER_TWO_ID, spaceshipsSelected[1]);
 
         //Change to the game scene
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(Constants.SCENE_ID_GAME);
     }
 
     #endregion

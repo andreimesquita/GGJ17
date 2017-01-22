@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Util;
 
 public class GameManager : MonoBehaviour
 {
@@ -63,7 +64,12 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(Constants.SCENE_ID_MAIN_MENU);
+    }
+
+    public void ReturnToCharacterSelector()
+    {
+        SceneManager.LoadScene(Constants.SCENE_ID_CHARACTER_SELECTOR);
     }
 
     public void NotifyPlayerDead()

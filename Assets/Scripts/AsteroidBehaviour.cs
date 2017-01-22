@@ -1,15 +1,30 @@
-﻿using UnityEngine;
+﻿using So;
+using UnityEngine;
 using UnityEngine.UI;
+using Util;
 
 [RequireComponent(typeof(Rigidbody))]
 public class AsteroidBehaviour : MonoBehaviour
 {
+    [SerializeField]
+    private AudioListSo audioListSo;
+
     private new Rigidbody rigidbody;
     private static float fallingVelocity = 2f;
+    private AudioSource audioSource;
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        AudioClip clip = audioListSo.AsteroidFallClip;
+
+        audioSource.clip = clip;
+        audioSource.PlayDelayed(fallingVelocity * 0.5f);
     }
 
     private void FixedUpdate()

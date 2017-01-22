@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 54356078399519478}
   - component: {fileID: 114633062886803270}
   - component: {fileID: 65793541509984808}
+  - component: {fileID: 82156870864844144}
   m_Layer: 0
   m_Name: SmallAsteroid
   m_TagString: Untagged
@@ -107,8 +108,88 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.621871, y: 7.1864223, z: 13.931066}
-  m_Center: {x: -0.016594231, y: 0.17067194, z: 0.1250565}
+  m_Size: {x: 16.058203, y: 9.909588, z: 13.931066}
+  m_Center: {x: 0.035772085, y: -0.038800478, z: 0.12505627}
+--- !u!82 &82156870864844144
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1031497790239910}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114633062886803270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,3 +201,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f90d84fc40c114f8320487b71c0d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioListSo: {fileID: 11400000, guid: 9d95539acf9178c49b828bb085c5653e, type: 2}

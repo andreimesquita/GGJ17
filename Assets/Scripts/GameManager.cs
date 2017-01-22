@@ -1,12 +1,17 @@
-﻿using DG.Tweening;
+﻿using System.Collections.Generic;
+using Achievements;
+using DG.Tweening;
 using So;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Util;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private AudioListSo audioListSo;
+    [SerializeField] private MissionsSo missionsSo;
+    [SerializeField] private NotificationMsgsPanel notificationMsgsPanel;
 
     public static GameManager Instance { get; private set; }
 
@@ -23,6 +28,9 @@ public class GameManager : MonoBehaviour
     public GameHudManager gameHudManager;
 
     private int deadPlayersCount;
+
+    private List<Mission> missions = new List<Mission>();
+    private float initialPlayTime;
 
     private void Awake()
     {
@@ -42,10 +50,17 @@ public class GameManager : MonoBehaviour
         gameHudManager.HideGameOverHud();
 
         DOVirtual.DelayedCall(1f, ResetGame);
+        
+        InvokeRepeating("ShowNotificationMsgs", 15.0f, 15.0f);
+
+        initialPlayTime = Time.time;
+        missionsSo.ResetGameValues();
     }
     
     private void GameOver()
     {
+        CancelInvoke("ShowNotificationMsgs");
+
         spawnManager.enabled = false;
 
         if (GameOverNotification != null)
@@ -90,5 +105,18 @@ public class GameManager : MonoBehaviour
 
         if (deadPlayersCount == 2)
             GameOver();
+    }
+
+    private void ShowNotificationMsgs()
+    {
+        missionsSo.Persist(MissionType.CURRENT_SPACESHIPS_PLAYING, 2-deadPlayersCount);
+        missionsSo.Increment(MissionType.TOTAL_GAME_PLAYED, Time.time - initialPlayTime);
+        missionsSo.Persist(MissionType.TOTAL_GAME_PLAYED_IN_CURRENT_GAME, Time.time - initialPlayTime);
+
+        Mission mission;
+        if (missionsSo.FindCompletedMissions(out mission))
+        {
+            this.notificationMsgsPanel.ShowMessage(mission.PresentationText);
+        }
     }
 }

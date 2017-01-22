@@ -5,6 +5,12 @@ using Util;
 
 public class MainMenuManager : MonoBehaviour
 {
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            OnExitPressed();
+    }
+
     [SerializeField] private AudioListSo audioListSo;
 
     public void OnPlayPressed()

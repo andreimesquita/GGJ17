@@ -33,13 +33,13 @@ namespace Achievements.Test
 
             Database.Persist(MissionType.TOTAL_GAME_PLAYED_IN_CURRENT_GAME, Time.time - initialPlayTime);
 
-            if (Database.FindCompletedMissions(ref completedMissions))
-            {
-                foreach (Mission mission in completedMissions)
-                {
-                    Debug.Log(mission);
-                }
-            }
+            //if (Database.FindCompletedMissions(ref completedMissions))
+            //{
+            //    foreach (Mission mission in completedMissions)
+            //    {
+            //        Debug.Log(mission);
+            //    }
+            //}
         }
     }
 }

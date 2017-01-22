@@ -33,9 +33,9 @@ namespace Achievements
             }
         }
 
-        public bool FindCompletedMissions(ref List<Mission> missions)
+        public bool FindCompletedMissions(out Mission m)
         {
-            missions.Clear();
+            m = null;
 
             foreach (Mission mission in allMissions)
             {
@@ -56,11 +56,12 @@ namespace Achievements
                 if (isMissionCompleted)
                 {
                     mission.IsSucceded = true;
-                    missions.Add(mission);
+                    m = mission;
+                    break;
                 }
             }
 
-            return missions.Count > 0;
+            return m != null;
         }
 
         public void Persist(MissionType missionType, float newValue)

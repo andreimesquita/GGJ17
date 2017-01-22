@@ -71,7 +71,7 @@ public class SpaceshipMove : MonoBehaviour
     public void ResetDirection()
     {
         this.directionVector = new Vector2(direction, 0.0f);
-        this.maximumSteeringQuaternion = Quaternion.Inverse(maximumSteeringQuaternion);
+        this.maximumSteeringQuaternion = Quaternion.AngleAxis(maximumSteeringAngle, Vector3.forward);
         currentVelocity = minimumVelocity;
     }
 }

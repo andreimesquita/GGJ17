@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
+    public int DeadPlayers { get { return deadPlayersCount; } }
+
     public delegate void GameOverDelegate();
 
     public event GameOverDelegate GameOverNotification;

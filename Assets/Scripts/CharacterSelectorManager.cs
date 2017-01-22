@@ -46,6 +46,15 @@ public class CharacterSelectorManager : MonoBehaviour
         UpdateSpaceshipSprite(1);
     }
 
+    private void Update()
+    {
+        //"Back" key on android
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(Constants.SCENE_ID_MAIN_MENU);
+        }
+    }
+
     #region UI Methods
 
     public void Previous(int id)

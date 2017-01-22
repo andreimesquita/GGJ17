@@ -7,7 +7,6 @@ using Util;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private AudioListSo audioListSo;
-    [SerializeField] private AudioSource audioSource;
 
     public static GameManager Instance { get; private set; }
 
@@ -57,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     public void OnResetGamePress()
     {
-        audioSource.PlayOneShot(audioListSo.ClickClip);
+        AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
         ResetGame();
     }
 
@@ -76,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        audioSource.PlayOneShot(audioListSo.ClickClip);
+        AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
         SceneManager.LoadScene(Constants.SCENE_ID_MAIN_MENU);
     }
 

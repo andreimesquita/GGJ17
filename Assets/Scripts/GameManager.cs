@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
 
         DOVirtual.DelayedCall(1f, ResetGame);
         
-        InvokeRepeating("ShowNotificationMsgs", 15.0f, 15.0f);
+        InvokeRepeating("ShowNotificationMsgs", 10.0f, 15.0f);
 
         initialPlayTime = Time.time;
         missionsSo.ResetGameValues();
@@ -86,6 +86,7 @@ public class GameManager : MonoBehaviour
         DOVirtual.DelayedCall(5, () => { spawnManager.enabled = true; });
 
         GameManager.Instance.entities.scoreText.text = "0";
+        InvokeRepeating("ShowNotificationMsgs", 10.0f, 15.0f);
     }
 
     public void ReturnToMainMenu()

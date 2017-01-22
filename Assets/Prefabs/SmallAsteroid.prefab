@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 54356078399519478}
   - component: {fileID: 114633062886803270}
   - component: {fileID: 65793541509984808}
-  - component: {fileID: 82219551526645360}
+  - component: {fileID: 82156870864844144}
   m_Layer: 0
   m_Name: SmallAsteroid
   m_TagString: Untagged
@@ -110,7 +110,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 16.058203, y: 9.909588, z: 13.931066}
   m_Center: {x: 0.035772085, y: -0.038800478, z: 0.12505627}
---- !u!82 &82219551526645360
+--- !u!82 &82156870864844144
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

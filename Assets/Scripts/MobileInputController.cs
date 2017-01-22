@@ -9,14 +9,14 @@ public class MobileInputController : MonoBehaviour
     {
         this.holdingDownRight = false;
 
-        GameManager.Instance.entities.spaceshipRight.spaceshipMove.ToggleDirection();
+        GameManager.Instance.entities.spaceshipRight.spaceshipMove.ResetDirection();
     }
 
     public void OnLeftScreenUp()
     {
         this.holdingDownLeft = false;
 
-        GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ToggleDirection();
+        GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ResetDirection();
     }
 
     public void OnRightScreenDown()
@@ -25,7 +25,7 @@ public class MobileInputController : MonoBehaviour
 
         this.holdingDownRight = true;
 
-        GameManager.Instance.entities.spaceshipRight.spaceshipMove.ToggleDirection();
+        GameManager.Instance.entities.spaceshipRight.spaceshipMove.ReverseInitialDirection();
     }
 
     public void OnLeftScreenDown()
@@ -34,6 +34,6 @@ public class MobileInputController : MonoBehaviour
 
         this.holdingDownLeft = true;
 
-        GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ToggleDirection();
+        GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ReverseInitialDirection();
     }
 }

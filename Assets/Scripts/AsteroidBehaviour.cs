@@ -37,7 +37,8 @@ public class AsteroidBehaviour : MonoBehaviour
         if (!other.gameObject.CompareTag("Spaceship"))
         {
             int scorePoints = int.Parse(GameManager.Instance.entities.scoreText.text);
-            scorePoints += (int) (transform.localScale.x * 1000);
+            float playerMultiplayer = GameManager.Instance.DeadPlayers == 1 ? 0.5f : 2.0f;
+            scorePoints += (int)(transform.localScale.x * 1000 * playerMultiplayer);
             GameManager.Instance.entities.scoreText.text = scorePoints.ToString();
         }
 

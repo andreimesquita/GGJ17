@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479701f20ec2fc44f88d282063bc6746, type: 3}
+  m_Name: AudioListSo
+  m_EditorClassIdentifier: 
+  AsteroidFallClip: {fileID: 8300000, guid: a46153202b4f32d4fbae5035d487cc15, type: 3}

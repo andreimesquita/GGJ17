@@ -7,5 +7,8 @@ namespace So
     {
         public AudioClip AsteroidFallClip;
         public AudioClip ClickClip;
+
+        public AudioClip SoundTrack;
+        public AudioClip SpaceshipClip;
     }
 }

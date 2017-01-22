@@ -13,3 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AsteroidFallClip: {fileID: 8300000, guid: a46153202b4f32d4fbae5035d487cc15, type: 3}
   ClickClip: {fileID: 8300000, guid: 29acfe3ef4998d54fb7a69540efdf185, type: 3}
+  SoundTrack: {fileID: 8300000, guid: 22508f4a95beb624f9ddc66dfc4b364e, type: 3}
+  SpaceshipClip: {fileID: 8300000, guid: 7a2e79d637f33ae40938d29964294c6b, type: 3}

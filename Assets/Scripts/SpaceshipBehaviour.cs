@@ -7,6 +7,7 @@ public class SpaceshipBehaviour : MonoBehaviour
 {
     [SerializeField] private int playerId;
     [SerializeField] private SpaceshipsListSo spaceshipsListSo;
+    [SerializeField] private ParticleSystem explosionEffect;
 
     public SpaceshipMove spaceshipMove;
 
@@ -27,6 +28,13 @@ public class SpaceshipBehaviour : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         GameManager.Instance.NotifyPlayerDead();
+
+        ParticleSystem explosion = Instantiate(this.explosionEffect) as ParticleSystem;
+
+        explosion.transform.position = this.transform.position;
+        explosion.Play();
+
+        Destroy(explosion.gameObject, explosion.main.duration);
 
         this.gameObject.SetActive(false);
     }

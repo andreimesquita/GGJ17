@@ -63,7 +63,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4096497780052106
 Transform:
   m_ObjectHideFlags: 1
@@ -144,6 +144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerId: 0
   spaceshipsListSo: {fileID: 11400000, guid: b0141dbe46563744fb261b4c7cdbb9c3, type: 2}
+  explosionEffect: {fileID: 198907070752468974, guid: 91af8a60b9f29b64e9c4ddd66f80caa0,
+    type: 2}
   spaceshipMove: {fileID: 114871805033224606}
 --- !u!114 &114871805033224606
 MonoBehaviour:

@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
     
     private void GameOver()
     {
+        CancelInvoke("ShowNotificationMsgs");
+
         spawnManager.enabled = false;
 
         if (GameOverNotification != null)

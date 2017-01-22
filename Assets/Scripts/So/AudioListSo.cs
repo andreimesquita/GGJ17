@@ -6,5 +6,6 @@ namespace So
     public class AudioListSo : ScriptableObject
     {
         public AudioClip AsteroidFallClip;
+        public AudioClip ClickClip;
     }
 }

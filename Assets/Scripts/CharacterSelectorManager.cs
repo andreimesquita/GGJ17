@@ -9,7 +9,6 @@ public class CharacterSelectorManager : MonoBehaviour
     [SerializeField] private Image[] spaceshipImages;
     [SerializeField] private SpaceshipsListSo spaceshipsListSo;
     [SerializeField] private AudioListSo audioListSo;
-    [SerializeField] private AudioSource audioSource;
 
     private readonly int[] spaceshipsSelected = new [] {0, 0};
 
@@ -52,7 +51,7 @@ public class CharacterSelectorManager : MonoBehaviour
 
     public void Previous(int id)
     {
-        audioSource.PlayOneShot(audioListSo.ClickClip);
+        AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
 
         spaceshipsSelected[id]--;
 
@@ -63,7 +62,7 @@ public class CharacterSelectorManager : MonoBehaviour
 
     public void Next(int id)
     {
-        audioSource.PlayOneShot(audioListSo.ClickClip);
+        AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
 
         spaceshipsSelected[id]++;
 
@@ -74,7 +73,7 @@ public class CharacterSelectorManager : MonoBehaviour
 
     public void StartGame()
     {
-        audioSource.PlayOneShot(audioListSo.ClickClip);
+        AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
 
         //Save the spaceships' Ids for being used during the game
         PlayerPrefs.SetInt(Constants.KEY_PLAYER_ONE_ID, spaceshipsSelected[0]);

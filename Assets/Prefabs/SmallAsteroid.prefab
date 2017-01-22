@@ -23,8 +23,10 @@ GameObject:
   - component: {fileID: 23055818000470698}
   - component: {fileID: 54356078399519478}
   - component: {fileID: 114633062886803270}
-  - component: {fileID: 65793541509984808}
   - component: {fileID: 82156870864844144}
+  - component: {fileID: 135622327992947878}
+  - component: {fileID: 135998046579794594}
+  - component: {fileID: 135428490597550212}
   m_Layer: 0
   m_Name: SmallAsteroid
   m_TagString: Untagged
@@ -39,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1031497790239910}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -1.25, z: 0}
+  m_LocalPosition: {x: 0.412, y: -1.399, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,18 +100,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65793541509984808
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1031497790239910}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 16.058203, y: 9.909588, z: 13.931066}
-  m_Center: {x: 0.035772085, y: -0.038800478, z: 0.12505627}
 --- !u!82 &82156870864844144
 AudioSource:
   m_ObjectHideFlags: 1
@@ -202,3 +192,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioListSo: {fileID: 11400000, guid: 9d95539acf9178c49b828bb085c5653e, type: 2}
+--- !u!135 &135428490597550212
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1031497790239910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.51
+  m_Center: {x: 3.31, y: 1.38, z: 1.43}
+--- !u!135 &135622327992947878
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1031497790239910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4.24
+  m_Center: {x: 0.09, y: -0.01, z: 0.97}
+--- !u!135 &135998046579794594
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1031497790239910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.14
+  m_Center: {x: -3.75, y: 0, z: -2.14}

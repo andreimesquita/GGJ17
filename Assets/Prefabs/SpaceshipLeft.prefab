@@ -195,6 +195,7 @@ MonoBehaviour:
   keyCode: 276
   direction: -1
   maximumSteeringAngle: 60
+  timer: {fileID: 0}
 --- !u!120 &120518438347184792
 LineRenderer:
   m_ObjectHideFlags: 1

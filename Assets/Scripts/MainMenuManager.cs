@@ -23,7 +23,9 @@ public class MainMenuManager : MonoBehaviour
     public void OnAchievementsPressed()
     {
         audioSource.PlayOneShot(audioListSo.ClickClip);
-        //TODO: shows up the achievements' list
+        
+        //shows up the achievements' list
+        SceneManager.LoadScene(Constants.SCENE_ID_ACHIEVEMENTS);
     }
 
     public void OnExitPressed()

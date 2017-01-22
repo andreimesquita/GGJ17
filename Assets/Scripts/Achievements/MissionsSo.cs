@@ -33,6 +33,11 @@ namespace Achievements
             }
         }
 
+        public Mission[] GetAllMissions()
+        {
+            return allMissions;
+        }
+
         public bool FindCompletedMissions(ref List<Mission> missions)
         {
             missions.Clear();

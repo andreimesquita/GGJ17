@@ -8,5 +8,6 @@
         public static readonly int SCENE_ID_MAIN_MENU = 0;
         public static readonly int SCENE_ID_CHARACTER_SELECTOR = 1;
         public static readonly int SCENE_ID_GAME = 2;
+        public static readonly int SCENE_ID_ACHIEVEMENTS = 3;
     }
 }

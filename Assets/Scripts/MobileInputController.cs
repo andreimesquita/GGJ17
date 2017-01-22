@@ -2,48 +2,38 @@
 
 public class MobileInputController : MonoBehaviour
 {
-    [SerializeField] private float inputTimeDelay;
-    [SerializeField] private float inputLockDelay;
-    [SerializeField] private Timer timer;
+    private bool holdingDownLeft;
+    private bool holdingDownRight;
 
-    private bool waitingLeftPressExecution;
-    private bool waitingRightPressExecution;
-
-    private void Awake()
+    public void OnRightScreenUp()
     {
-        this.inputTimeDelay = 0.12f;
-        this.inputLockDelay = 0.35f;
+        this.holdingDownRight = false;
+
+        GameManager.Instance.entities.spaceshipRight.spaceshipMove.ToggleDirection();
     }
 
-    private void ToggleWaitingRightPressExecution()
+    public void OnLeftScreenUp()
     {
-        this.waitingRightPressExecution = !this.waitingRightPressExecution;
+        this.holdingDownLeft = false;
+
+        GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ToggleDirection();
     }
 
-    private void ToggleWaitingLeftPressExecution()
+    public void OnRightScreenDown()
     {
-        this.waitingLeftPressExecution = !this.waitingLeftPressExecution;
+        if (holdingDownRight) return;
+
+        this.holdingDownRight = true;
+
+        GameManager.Instance.entities.spaceshipRight.spaceshipMove.ToggleDirection();
     }
 
-    public void OnRightScreenPressed()
+    public void OnLeftScreenDown()
     {
-        if (waitingRightPressExecution) return;
+        if (holdingDownLeft) return;
 
-        ToggleWaitingRightPressExecution();
+        this.holdingDownLeft = true;
 
-        timer.RegisterCallback(inputTimeDelay, GameManager.Instance.entities.spaceshipRight.spaceshipMove.ToggleDirection);
-        timer.RegisterCallback(inputLockDelay, ToggleWaitingRightPressExecution);
+        GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ToggleDirection();
     }
-
-    public void OnLeftScreenPressed()
-    {
-        if (waitingLeftPressExecution) return;
-
-        ToggleWaitingLeftPressExecution();
-
-        timer.RegisterCallback(inputTimeDelay, GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ToggleDirection);
-        timer.RegisterCallback(inputLockDelay, ToggleWaitingLeftPressExecution);
-    }
-
-
 }

@@ -28,14 +28,6 @@ public class SpaceshipMove : MonoBehaviour
         this.maximumSteeringQuaternion = Quaternion.AngleAxis(maximumSteeringAngle, Vector3.forward);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(keyCode))
-        {
-            ToggleDirection();
-        }
-    }
-
     private void FixedUpdate()
     {
         float velocityRatio = currentVelocity / maximumVelocity;
@@ -69,9 +61,16 @@ public class SpaceshipMove : MonoBehaviour
         this.transform.rotation = deltaRotation;
     }
 
-    public void ToggleDirection()
+    public void ReverseInitialDirection()
     {
-        this.directionVector *= -1.0f;
+        this.directionVector = new Vector2(direction * -1.0f, 0.0f);
+        this.maximumSteeringQuaternion = Quaternion.Inverse(maximumSteeringQuaternion);
+        currentVelocity = minimumVelocity;
+    }
+
+    public void ResetDirection()
+    {
+        this.directionVector = new Vector2(direction, 0.0f);
         this.maximumSteeringQuaternion = Quaternion.Inverse(maximumSteeringQuaternion);
         currentVelocity = minimumVelocity;
     }

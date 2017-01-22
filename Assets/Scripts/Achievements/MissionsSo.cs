@@ -33,6 +33,11 @@ namespace Achievements
             }
         }
 
+        public Mission[] GetAllMissions()
+        {
+            return allMissions;
+        }
+
         public bool FindCompletedMissions(out Mission m)
         {
             m = null;

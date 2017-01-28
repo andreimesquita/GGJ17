@@ -28,8 +28,7 @@ namespace Achievements
 
             foreach (MissionType missionType in gameValues)
             {
-                //Start all values with 0
-                Database.Add(new SwKeyValuePair(missionType, 0));
+                Database[GetIdByKey(missionType)].Value = 0;
             }
         }
 
@@ -103,5 +102,16 @@ namespace Achievements
 
             return null;
         }
-     }
+
+        private int GetIdByKey(MissionType type)
+        {
+            for (int i = 0; i < Database.Count; i++)
+            {
+                if (Database[i].Key == type)
+                    return i;
+            }
+
+            return -1;
+        }
+    }
 }

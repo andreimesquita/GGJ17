@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public class SpaceshipMove : MonoBehaviour
     [SerializeField] private KeyCode keyCode;
     [SerializeField] private float direction;
     [SerializeField] private float maximumSteeringAngle;
-    [SerializeField] private Timer timer;
+    //[SerializeField] private Timer timer;
 
     private Vector2 directionVector;
     private Quaternion maximumSteeringQuaternion;
@@ -36,7 +37,9 @@ public class SpaceshipMove : MonoBehaviour
 
         this.isPresentationStep = true;
 
-        timer.RegisterCallback(this.presentationTime, DisablePresentationStep);
+        DOVirtual.DelayedCall(presentationTime, DisablePresentationStep);
+
+        //timer.RegisterCallback(this.presentationTime, DisablePresentationStep);
 
         StartCoroutine(AccelerateGracefully());
     }

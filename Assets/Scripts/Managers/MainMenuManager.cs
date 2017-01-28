@@ -26,6 +26,11 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene(Constants.SCENE_ID_ACHIEVEMENTS);
     }
 
+    public void OnCreditsPressed()
+    {
+        SceneManager.LoadScene(Constants.SCENE_ID_CREDITS);
+    }
+
     public void OnExitPressed()
     {
         AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);

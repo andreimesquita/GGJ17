@@ -116,6 +116,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+	<data name="Credits.About.Key" xml:space="preserve">
+		<value>ABOUT</value>
+	</data>
+	<data name="Credits.AboutText.Key" xml:space="preserve">
+		<value>This game was born in the Global Game Jam 2017.</value>
+	</data>
+	<data name="Credits.Developers.Key" xml:space="preserve">
+		<value>DEVELOPERS</value>
+	</data>
+	<data name="Credits.DevelopersText.Key" xml:space="preserve">
+		<value>&lt;b&gt;Ândrei D'Oliveira Mesquita Schuch&lt;/b&gt;
+
+&lt;b&gt;Guilherme Quadros da Silva&lt;/b&gt;
+
+&lt;b&gt;Pablo Marcel Parada&lt;/b&gt;</value>
+	</data>
+	<data name="Credits.Presentation.Key" xml:space="preserve">
+		<value>CREDITS</value>
+	</data>
 	<data name="MainMenu.Credits.Key" xml:space="preserve">
 		<value>CREDITS</value>
 	</data>

@@ -34,15 +34,20 @@ namespace Assets.Scripts.Util
         {
             string languageString = LanguageHelper.ParseLanguage(newLanguage);
 
+            LanguageManager.Instance.defaultLanguage = languageString;
+
             LanguageManager.Instance.ChangeLanguage(languageString);
         }
 
-#if ANDROID
         private void Start()
         {
+
+            LanguageManager.SetDontDestroyOnLoad();
+
+#if ANDROID
             Destroy(this.gameObject);
-        }
 #endif
+        }
 
         private void OnGUI()
         {

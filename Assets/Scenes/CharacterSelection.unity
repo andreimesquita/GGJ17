@@ -471,6 +471,7 @@ GameObject:
   - component: {fileID: 442566922}
   - component: {fileID: 442566924}
   - component: {fileID: 442566923}
+  - component: {fileID: 442566925}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -535,6 +536,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 442566921}
+--- !u!114 &442566925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 442566921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba390450cf8b4be18bf68e8a61280f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: SpaceshipSelection.StartGame.Key
 --- !u!1 &508864936
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +595,7 @@ GameObject:
   - component: {fileID: 779416233}
   - component: {fileID: 779416236}
   - component: {fileID: 779416235}
+  - component: {fileID: 779416237}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -674,6 +688,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0.2997405, g: 0.41536817, b: 0.5294118, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &779416237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 779416231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba390450cf8b4be18bf68e8a61280f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: SpaceshipSelection.Previous.Key
 --- !u!1 &886266105
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,6 +1001,7 @@ GameObject:
   - component: {fileID: 1114392781}
   - component: {fileID: 1114392784}
   - component: {fileID: 1114392783}
+  - component: {fileID: 1114392785}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1067,6 +1094,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0.2997405, g: 0.41536817, b: 0.5294118, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1114392785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1114392779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba390450cf8b4be18bf68e8a61280f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: SpaceshipSelection.Previous.Key
 --- !u!1 &1251927776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1118,7 @@ GameObject:
   - component: {fileID: 1251927778}
   - component: {fileID: 1251927781}
   - component: {fileID: 1251927780}
+  - component: {fileID: 1251927782}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1171,6 +1211,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0.2997405, g: 0.41536817, b: 0.5294118, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1251927782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251927776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba390450cf8b4be18bf68e8a61280f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: SpaceshipSelection.Next.Key
 --- !u!1 &1324353645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,6 +1235,7 @@ GameObject:
   - component: {fileID: 1324353647}
   - component: {fileID: 1324353650}
   - component: {fileID: 1324353649}
+  - component: {fileID: 1324353651}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1275,6 +1328,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0.2997405, g: 0.41536817, b: 0.5294118, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1324353651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324353645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba390450cf8b4be18bf68e8a61280f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: SpaceshipSelection.Next.Key
 --- !u!1 &1393463133
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,6 +2171,7 @@ GameObject:
   - component: {fileID: 2043858370}
   - component: {fileID: 2043858369}
   - component: {fileID: 2043858371}
+  - component: {fileID: 2043858372}
   m_Layer: 5
   m_Name: Spaceship Select Label
   m_TagString: Untagged
@@ -2152,7 +2218,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 31a44ee0650f51b4ba7a7a255d59f0f9, type: 3}
-    m_FontSize: 70
+    m_FontSize: 60
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 5
@@ -2163,7 +2229,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SPACESHIP SELECT
+  m_Text: SPACESHIP SELECTION
 --- !u!222 &2043858370
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2184,6 +2250,18 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &2043858372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043858367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba390450cf8b4be18bf68e8a61280f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: SpaceshipSelection.Presentation.Key
 --- !u!1 &2067194835
 GameObject:
   m_ObjectHideFlags: 0

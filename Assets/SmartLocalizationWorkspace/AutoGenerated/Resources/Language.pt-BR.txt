@@ -117,15 +117,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 	<data name="MainMenu.Credits.Key" xml:space="preserve">
-		<value>Créditos</value>
+		<value>CRÉDITOS</value>
 	</data>
 	<data name="MainMenu.Exit.Key" xml:space="preserve">
-		<value>Sair</value>
+		<value>SAIR</value>
 	</data>
 	<data name="MainMenu.Missions.Key" xml:space="preserve">
-		<value>Missões</value>
+		<value>MISSÕES</value>
 	</data>
 	<data name="MainMenu.Play.Key" xml:space="preserve">
-		<value>Jogar</value>
+		<value>JOGAR</value>
+	</data>
+	<data name="SpaceshipSelection.Next.Key" xml:space="preserve">
+		<value>PRÓXIMO</value>
+	</data>
+	<data name="SpaceshipSelection.Presentation.Key" xml:space="preserve">
+		<value>SELEÇÃO DE NAVES</value>
+	</data>
+	<data name="SpaceshipSelection.Previous.Key" xml:space="preserve">
+		<value>ANTERIOR</value>
+	</data>
+	<data name="SpaceshipSelection.StartGame.Key" xml:space="preserve">
+		<value>INICIAR JOGO</value>
 	</data>
 </root>

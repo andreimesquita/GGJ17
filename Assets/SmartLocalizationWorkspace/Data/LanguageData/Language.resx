@@ -116,6 +116,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+	<data name="Credits.About.Key" xml:space="preserve">
+		<value>About label</value>
+	</data>
+	<data name="Credits.AboutText.Key" xml:space="preserve">
+		<value>About' text</value>
+	</data>
+	<data name="Credits.Developers.Key" xml:space="preserve">
+		<value>Developers label</value>
+	</data>
+	<data name="Credits.DevelopersText.Key" xml:space="preserve">
+		<value>Developers' text</value>
+	</data>
+	<data name="Credits.Presentation.Key" xml:space="preserve">
+		<value>The label above the screen</value>
+	</data>
+	<data name="Game.NiceTry.Key" xml:space="preserve">
+		<value>The Nice Try presentation</value>
+	</data>
+	<data name="Game.Points.Key" xml:space="preserve">
+		<value>The Points presentation</value>
+	</data>
+	<data name="Game.Score.Key" xml:space="preserve">
+		<value>The score's label</value>
+	</data>
+	<data name="Game.YouMade.Key" xml:space="preserve">
+		<value>You Made Presentation</value>
+	</data>
 	<data name="MainMenu.Credits.Key" xml:space="preserve">
 		<value>MainMenu -&gt; Credits Button</value>
 	</data>
@@ -140,19 +167,7 @@
 	<data name="SpaceshipSelection.StartGame.Key" xml:space="preserve">
 		<value>Start game' button</value>
 	</data>
-	<data name="Credits.About.Key" xml:space="preserve">
-		<value>About label</value>
-	</data>
-	<data name="Credits.AboutText.Key" xml:space="preserve">
-		<value>About' text</value>
-	</data>
-	<data name="Credits.Developers.Key" xml:space="preserve">
-		<value>Developers label</value>
-	</data>
-	<data name="Credits.DevelopersText.Key" xml:space="preserve">
-		<value>Developers' text</value>
-	</data>
-	<data name="Credits.Presentation.Key" xml:space="preserve">
-		<value>The label above the screen</value>
+	<data name="Missions.Presentation.Key" xml:space="preserve">
+		<value>The presentation text</value>
 	</data>
 </root>

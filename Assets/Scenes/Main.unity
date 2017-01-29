@@ -345,6 +345,48 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 50634149}
   m_Script: {fileID: 11500000, guid: 500c57d3ab374194d875b087e8b52d43, type: 3}
+--- !u!1001 &449662408
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4841720333367522, guid: eadb2ac0a282a334ba85f11f22f4c241, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 380.72223
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841720333367522, guid: eadb2ac0a282a334ba85f11f22f4c241, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 635.3701
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841720333367522, guid: eadb2ac0a282a334ba85f11f22f4c241, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841720333367522, guid: eadb2ac0a282a334ba85f11f22f4c241, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841720333367522, guid: eadb2ac0a282a334ba85f11f22f4c241, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841720333367522, guid: eadb2ac0a282a334ba85f11f22f4c241, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841720333367522, guid: eadb2ac0a282a334ba85f11f22f4c241, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841720333367522, guid: eadb2ac0a282a334ba85f11f22f4c241, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: eadb2ac0a282a334ba85f11f22f4c241, type: 2}
+  m_IsPrefabParent: 0
 --- !u!114 &664528686 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114612158599162356, guid: ce99fe63fb4aaed4a976bef109bb4a12,
@@ -1010,6 +1052,74 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224133809323578540, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
     type: 2}
   m_PrefabInternal: {fileID: 1007272071}
+--- !u!1 &1007272073 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1202886299277236, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1007272071}
+--- !u!1 &1007272074 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1727986877815462, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1007272071}
+--- !u!1 &1007272075 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1397834366843670, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1007272071}
+--- !u!1 &1007272076 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1870970114295694, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1007272071}
+--- !u!114 &1007272077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007272073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba390450cf8b4be18bf68e8a61280f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Game.Points.Key
+--- !u!114 &1007272078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007272074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba390450cf8b4be18bf68e8a61280f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Game.YouMade.Key
+--- !u!114 &1007272079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007272075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba390450cf8b4be18bf68e8a61280f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Game.NiceTry.Key
+--- !u!114 &1007272080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007272076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba390450cf8b4be18bf68e8a61280f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizedKey: Game.Score.Key
 --- !u!1001 &1188591606
 Prefab:
   m_ObjectHideFlags: 0

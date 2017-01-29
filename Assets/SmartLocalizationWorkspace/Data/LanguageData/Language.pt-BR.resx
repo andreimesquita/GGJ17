@@ -135,6 +135,18 @@
 	<data name="Credits.Presentation.Key" xml:space="preserve">
 		<value>CRÉDITOS</value>
 	</data>
+	<data name="Game.NiceTry.Key" xml:space="preserve">
+		<value>MUITO BEM!</value>
+	</data>
+	<data name="Game.Points.Key" xml:space="preserve">
+		<value>PONTOS</value>
+	</data>
+	<data name="Game.Score.Key" xml:space="preserve">
+		<value>PONTOS:</value>
+	</data>
+	<data name="Game.YouMade.Key" xml:space="preserve">
+		<value>VOCÊ FEZ</value>
+	</data>
 	<data name="MainMenu.Credits.Key" xml:space="preserve">
 		<value>CRÉDITOS</value>
 	</data>
@@ -146,6 +158,9 @@
 	</data>
 	<data name="MainMenu.Play.Key" xml:space="preserve">
 		<value>JOGAR</value>
+	</data>
+	<data name="Missions.Presentation.Key" xml:space="preserve">
+		<value>MISSÕES</value>
 	</data>
 	<data name="SpaceshipSelection.Next.Key" xml:space="preserve">
 		<value>PRÓXIMO</value>

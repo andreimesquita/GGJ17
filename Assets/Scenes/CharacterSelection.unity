@@ -327,6 +327,140 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0.08965492, b: 1, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!1001 &394873977
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2067194839}
+    m_Modifications:
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114281905697138558, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_Text
+      value: Lot of spaceships to choose!
+      objectReference: {fileID: 0}
+    - target: {fileID: 224743375760368438, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224743375760368438, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 224513991396183316, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -226
+      objectReference: {fileID: 0}
+    - target: {fileID: 224513991396183316, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 1706788922612392, guid: 4ea12b9b36abcb140a5539da73d2db8e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ea12b9b36abcb140a5539da73d2db8e, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &394873978 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224178214753084310, guid: 4ea12b9b36abcb140a5539da73d2db8e,
+    type: 2}
+  m_PrefabInternal: {fileID: 394873977}
 --- !u!1 &442566921
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +828,6 @@ MonoBehaviour:
   - {fileID: 1929685992}
   spaceshipsListSo: {fileID: 11400000, guid: b0141dbe46563744fb261b4c7cdbb9c3, type: 2}
   audioListSo: {fileID: 11400000, guid: 9d95539acf9178c49b828bb085c5653e, type: 2}
-  audioSource: {fileID: 0}
 --- !u!4 &1008249968
 Transform:
   m_ObjectHideFlags: 0
@@ -2139,6 +2272,7 @@ RectTransform:
   - {fileID: 1890035274}
   - {fileID: 508864937}
   - {fileID: 886266106}
+  - {fileID: 394873978}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

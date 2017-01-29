@@ -197,8 +197,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: P:/Git/Unity/GGJ17/Releases/Keystore.keystore
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: P:/Git/Unity/GGJ17/Releases/user.keystore
+  AndroidKeyaliasName: space wave
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   androidEnableBanner: 0

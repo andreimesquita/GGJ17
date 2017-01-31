@@ -16,7 +16,7 @@ namespace Achievements
 
             for (int i = 0; i < missions.Length; i++)
             {
-                MissionHolder[i].presentationText.text = missions[i].PresentationText;
+                MissionHolder[i].presentationText.text = missions[i].ToString();
 
                 if (missions[i].IsSucceded)
                     MissionHolder[i].SetCompleted();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using SmartLocalization;
 using UnityEngine;
 
 namespace Achievements
@@ -24,13 +25,13 @@ namespace Achievements
     {
         public bool IsSucceded;
 
-        public List<SwKeyValuePair> Values;
+        public string PresentationTextKey;
 
-        public string PresentationText;
+        public List<SwKeyValuePair> Values;
 
         public override string ToString()
         {
-            return PresentationText;
+            return LanguageManager.Instance.GetTextValue(PresentationTextKey);
         }
     }
 }

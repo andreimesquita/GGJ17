@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Travel1200Total
   m_EditorClassIdentifier: 
   IsSucceded: 0
+  PresentationTextKey: Travel1200Total.PresentationText.Key
   Values:
   - Key: 0
     Value: 1200000

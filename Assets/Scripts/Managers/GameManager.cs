@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
         Mission mission;
         if (missionsSo.FindCompletedMissions(out mission))
         {
-            this.notificationMsgsPanel.ShowMessage(mission.PresentationText);
+            this.notificationMsgsPanel.ShowMessage(mission.ToString());
         }
     }
 }

@@ -174,4 +174,28 @@
 	<data name="SpaceshipSelection.StartGame.Key" xml:space="preserve">
 		<value>START GAME</value>
 	</data>
+	<data name="Travel120_2Spaceships.PresentationText.Key" xml:space="preserve">
+		<value>Keep two spaceships alive up to 2 minutes</value>
+	</data>
+	<data name="Travel1200Total.PresentationText.Key" xml:space="preserve">
+		<value>Travel 20 minutes in total</value>
+	</data>
+	<data name="Travel30_2Spaceships.PresentationText.Key" xml:space="preserve">
+		<value>Keep two spaceships alive up to 30 seconds</value>
+	</data>
+	<data name="Travel300_1Spaceship.PresentationText.Key" xml:space="preserve">
+		<value>Travel 5 minutes in total with one spaceship</value>
+	</data>
+	<data name="Travel300Total.PresentationText.Key" xml:space="preserve">
+		<value>Travel 5 minutes in total</value>
+	</data>
+	<data name="Travel60_2Spaceships.PresentationText.Key" xml:space="preserve">
+		<value>Keep two spaceships alive up to one minute</value>
+	</data>
+	<data name="Travel600_1Spaceship.PresentationText.Key" xml:space="preserve">
+		<value>Travel 10 minutes in total with one spaceship</value>
+	</data>
+	<data name="Travel600Total.PresentationText.Key" xml:space="preserve">
+		<value>Travel 10 minutes in total</value>
+	</data>
 </root>

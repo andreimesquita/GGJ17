@@ -174,4 +174,28 @@
 	<data name="SpaceshipSelection.StartGame.Key" xml:space="preserve">
 		<value>INICIAR JOGO</value>
 	</data>
+	<data name="Travel120_2Spaceships.PresentationText.Key" xml:space="preserve">
+		<value>Mantenha duas naves vivas por 2 minutos</value>
+	</data>
+	<data name="Travel1200Total.PresentationText.Key" xml:space="preserve">
+		<value>Viage 20 minutos no total</value>
+	</data>
+	<data name="Travel30_2Spaceships.PresentationText.Key" xml:space="preserve">
+		<value>Mantenha duas naves vivas por 30 segundos</value>
+	</data>
+	<data name="Travel300_1Spaceship.PresentationText.Key" xml:space="preserve">
+		<value>Viage 5 minutos com 1 espaçonave</value>
+	</data>
+	<data name="Travel300Total.PresentationText.Key" xml:space="preserve">
+		<value>Viage 5 minutos no total</value>
+	</data>
+	<data name="Travel60_2Spaceships.PresentationText.Key" xml:space="preserve">
+		<value>Mantenha 2 espaçonaves vivas por 1 minuto</value>
+	</data>
+	<data name="Travel600_1Spaceship.PresentationText.Key" xml:space="preserve">
+		<value>Viage 10 minutos com 1 espaçonave</value>
+	</data>
+	<data name="Travel600Total.PresentationText.Key" xml:space="preserve">
+		<value>Viage 10 minutos no total</value>
+	</data>
 </root>

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Travel600_1Spaceship
   m_EditorClassIdentifier: 
   IsSucceded: 0
+  PresentationTextKey: Travel600_1Spaceship.PresentationText.Key
   Values:
   - Key: 1
     Value: 600

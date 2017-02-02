@@ -479,6 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetLanguage: 0
+  rootPanel: {fileID: 2067194835}
 --- !u!4 &1528410720
 Transform:
   m_ObjectHideFlags: 0

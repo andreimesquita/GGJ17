@@ -122,13 +122,13 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.unisinos.ggj17
-  bundleVersion: 0.1
+  bundleVersion: 0.2
   preloadedAssets: []
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
   xboxOneDisableKinectGpuReservation: 0
   protectGraphicsMemory: 0
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -198,7 +198,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: P:/Git/Unity/GGJ17/Releases/user.keystore
-  AndroidKeyaliasName: space wave
+  AndroidKeyaliasName: "\xE2ndrei schuch"
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   androidEnableBanner: 0

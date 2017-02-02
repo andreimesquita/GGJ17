@@ -10,6 +10,8 @@ namespace Assets.Scripts.Managers
         [SerializeField]
         private bool resetLanguage;
 
+        public GameObject rootPanel;
+
         protected override void Start()
         {
             if (resetLanguage)
@@ -21,6 +23,8 @@ namespace Assets.Scripts.Managers
 
             if (PlayerPrefs.HasKey(Constants.CURRENT_LANGUAGE_CODE_KEY))
             {
+                rootPanel.SetActive(false);
+
                 string currentLanguageCode = PlayerPrefs.GetString(Constants.CURRENT_LANGUAGE_CODE_KEY);
 
                 LanguageManager.Instance.ChangeLanguage(currentLanguageCode);

@@ -6,6 +6,8 @@ namespace Assets.Scripts.Util
 {
     public class LanguageSwitcher : MonoBehaviour
     {
+        public bool showGUI = false;
+
         public enum Language
         {
             Portuguese,
@@ -54,6 +56,9 @@ namespace Assets.Scripts.Util
 
         private void OnGUI()
         {
+            if (!showGUI)
+                return;
+
             if (GUILayout.Button("English"))
                 SwitchLanguage(Language.English);
 

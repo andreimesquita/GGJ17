@@ -1,24 +1,24 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening;
+﻿using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NotificationMsgsPanel : MonoBehaviour
+namespace Assets.Scripts
 {
-    public Text Message;
-
-    public void ShowMessage(string msg)
+    public class NotificationMsgsPanel : MonoBehaviour
     {
-        Message.text = msg;
-        this.gameObject.SetActive(true);
+        public Text Message;
 
-        DOVirtual.DelayedCall(3f, HideMessage);
-    }
+        public void ShowMessage(string msg)
+        {
+            Message.text = msg;
+            this.gameObject.SetActive(true);
 
-    private void HideMessage()
-    {
-        this.gameObject.SetActive(false); 
+            DOVirtual.DelayedCall(3f, HideMessage);
+        }
+
+        private void HideMessage()
+        {
+            this.gameObject.SetActive(false); 
+        }
     }
 }

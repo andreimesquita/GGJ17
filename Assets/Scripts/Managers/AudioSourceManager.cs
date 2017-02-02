@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
 
-public class AudioSourceManager : MonoBehaviour
+namespace Assets.Scripts.Managers
 {
-    public static AudioSourceManager Instance;
-    public AudioSource audioSource;
-
-    private void Awake()
+    public class AudioSourceManager : MonoBehaviour
     {
-        if (Instance != null && Instance != this) Destroy(this.gameObject);
-        if (Instance == null) Instance = this;
+        public static AudioSourceManager Instance;
+        public AudioSource audioSource;
 
-        DontDestroyOnLoad(this.gameObject);
+        private void Awake()
+        {
+            if (Instance != null && Instance != this) Destroy(this.gameObject);
+            if (Instance == null) Instance = this;
 
-        audioSource = this.GetComponent<AudioSource>();
+            DontDestroyOnLoad(this.gameObject);
+
+            audioSource = this.GetComponent<AudioSource>();
+        }
     }
 }

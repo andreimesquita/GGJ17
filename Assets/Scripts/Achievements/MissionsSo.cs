@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Achievements
+namespace Assets.Scripts.Achievements
 {
     public enum MissionType
     {

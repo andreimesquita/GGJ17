@@ -1,39 +1,42 @@
-﻿using So;
+﻿using Assets.Scripts.So;
+using Assets.Scripts.Util;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Util;
 
-public class MainMenuManager : MonoBehaviour
+namespace Assets.Scripts.Managers
 {
-    private void Update()
+    public class MainMenuManager : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            OnExitPressed();
-    }
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                OnExitPressed();
+        }
 
-    [SerializeField] private AudioListSo audioListSo;
+        [SerializeField] private AudioListSo audioListSo;
 
-    public void OnPlayPressed()
-    {
-        AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
-        SceneManager.LoadScene(Constants.SCENE_ID_CHARACTER_SELECTOR);
-    }
+        public void OnPlayPressed()
+        {
+            AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
+            SceneManager.LoadScene(Constants.SCENE_ID_CHARACTER_SELECTOR);
+        }
 
-    public void OnAchievementsPressed()
-    {
-        AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
-        //shows up the achievements' list
-        SceneManager.LoadScene(Constants.SCENE_ID_ACHIEVEMENTS);
-    }
+        public void OnAchievementsPressed()
+        {
+            AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
+            //shows up the achievements' list
+            SceneManager.LoadScene(Constants.SCENE_ID_ACHIEVEMENTS);
+        }
 
-    public void OnCreditsPressed()
-    {
-        SceneManager.LoadScene(Constants.SCENE_ID_CREDITS);
-    }
+        public void OnCreditsPressed()
+        {
+            SceneManager.LoadScene(Constants.SCENE_ID_CREDITS);
+        }
 
-    public void OnExitPressed()
-    {
-        AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
-        Application.Quit();
+        public void OnExitPressed()
+        {
+            AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
+            Application.Quit();
+        }
     }
 }

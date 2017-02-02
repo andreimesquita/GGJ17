@@ -1,123 +1,125 @@
 ﻿using System.Collections.Generic;
-using Achievements;
+using Assets.Scripts.Achievements;
+using Assets.Scripts.So;
+using Assets.Scripts.Util;
 using DG.Tweening;
-using So;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using Util;
 
-public class GameManager : MonoBehaviour
+namespace Assets.Scripts.Managers
 {
-    [SerializeField] private AudioListSo audioListSo;
-    [SerializeField] private MissionsSo missionsSo;
-    [SerializeField] private NotificationMsgsPanel notificationMsgsPanel;
-
-    public static GameManager Instance { get; private set; }
-
-    public int DeadPlayers { get { return deadPlayersCount; } }
-
-    public delegate void GameOverDelegate();
-
-    public event GameOverDelegate GameOverNotification;
-
-    public EntitiesManager entities;
-
-    public SpawnManager spawnManager;
-
-    public GameHudManager gameHudManager;
-
-    private int deadPlayersCount;
-
-    private List<Mission> missions = new List<Mission>();
-    private float initialPlayTime;
-
-    private void Awake()
+    public class GameManager : MonoBehaviour
     {
-        if (Instance)
-        {
-            if (Instance != this)
-                Destroy(this.gameObject);
-        }
-        else
-        {
-            Instance = FindObjectOfType<GameManager>();
-        }
-    }
+        [SerializeField] private AudioListSo audioListSo;
+        [SerializeField] private MissionsSo missionsSo;
+        [SerializeField] private NotificationMsgsPanel notificationMsgsPanel;
 
-    private void Start()
-    {
-        gameHudManager.HideGameOverHud();
+        public static GameManager Instance { get; private set; }
 
-        DOVirtual.DelayedCall(1f, ResetGame);
+        public int DeadPlayers { get { return deadPlayersCount; } }
+
+        public delegate void GameOverDelegate();
+
+        public event GameOverDelegate GameOverNotification;
+
+        public EntitiesManager entities;
+
+        public SpawnManager spawnManager;
+
+        public GameHudManager gameHudManager;
+
+        private int deadPlayersCount;
+
+        private List<Mission> missions = new List<Mission>();
+        private float initialPlayTime;
+
+        private void Awake()
+        {
+            if (Instance)
+            {
+                if (Instance != this)
+                    Destroy(this.gameObject);
+            }
+            else
+            {
+                Instance = FindObjectOfType<GameManager>();
+            }
+        }
+
+        private void Start()
+        {
+            gameHudManager.HideGameOverHud();
+
+            DOVirtual.DelayedCall(1f, ResetGame);
         
-        InvokeRepeating("ShowNotificationMsgs", 10.0f, 15.0f);
+            InvokeRepeating("ShowNotificationMsgs", 10.0f, 15.0f);
 
-        initialPlayTime = Time.time;
-        missionsSo.ResetGameValues();
-    }
+            initialPlayTime = Time.time;
+            missionsSo.ResetGameValues();
+        }
     
-    private void GameOver()
-    {
-        CancelInvoke("ShowNotificationMsgs");
-
-        spawnManager.enabled = false;
-
-        if (GameOverNotification != null)
-            GameOverNotification();
-
-        gameHudManager.ShowGameOverHud();
-    }
-
-    public void OnResetGamePress()
-    {
-        AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
-        ResetGame();
-    }
-
-    public void ResetGame()
-    {
-        gameHudManager.HideGameOverHud();
-
-        deadPlayersCount = 0;
-
-        entities.RespawnPlayers();
-
-        DOVirtual.DelayedCall(5, () => { spawnManager.enabled = true; });
-
-        GameManager.Instance.entities.scoreText.text = "0";
-        InvokeRepeating("ShowNotificationMsgs", 10.0f, 15.0f);
-    }
-
-    public void ReturnToMainMenu()
-    {
-        AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
-        SceneManager.LoadScene(Constants.SCENE_ID_MAIN_MENU);
-    }
-
-    public void ReturnToCharacterSelector()
-    {
-        SceneManager.LoadScene(Constants.SCENE_ID_CHARACTER_SELECTOR);
-    }
-
-    public void NotifyPlayerDead()
-    {
-        deadPlayersCount++;
-
-        if (deadPlayersCount == 2)
-            GameOver();
-    }
-
-    private void ShowNotificationMsgs()
-    {
-        missionsSo.Persist(MissionType.CURRENT_SPACESHIPS_PLAYING, 2-deadPlayersCount);
-        missionsSo.Increment(MissionType.TOTAL_GAME_PLAYED, Time.time - initialPlayTime);
-        missionsSo.Persist(MissionType.TOTAL_GAME_PLAYED_IN_CURRENT_GAME, Time.time - initialPlayTime);
-
-        Mission mission;
-        if (missionsSo.FindCompletedMissions(out mission))
+        private void GameOver()
         {
-            this.notificationMsgsPanel.ShowMessage(mission.ToString());
+            CancelInvoke("ShowNotificationMsgs");
+
+            spawnManager.enabled = false;
+
+            if (GameOverNotification != null)
+                GameOverNotification();
+
+            gameHudManager.ShowGameOverHud();
+        }
+
+        public void OnResetGamePress()
+        {
+            AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
+            ResetGame();
+        }
+
+        public void ResetGame()
+        {
+            gameHudManager.HideGameOverHud();
+
+            deadPlayersCount = 0;
+
+            entities.RespawnPlayers();
+
+            DOVirtual.DelayedCall(5, () => { spawnManager.enabled = true; });
+
+            GameManager.Instance.entities.scoreText.text = "0";
+            InvokeRepeating("ShowNotificationMsgs", 10.0f, 15.0f);
+        }
+
+        public void ReturnToMainMenu()
+        {
+            AudioSourceManager.Instance.audioSource.PlayOneShot(audioListSo.ClickClip);
+            SceneManager.LoadScene(Constants.SCENE_ID_MAIN_MENU);
+        }
+
+        public void ReturnToCharacterSelector()
+        {
+            SceneManager.LoadScene(Constants.SCENE_ID_CHARACTER_SELECTOR);
+        }
+
+        public void NotifyPlayerDead()
+        {
+            deadPlayersCount++;
+
+            if (deadPlayersCount == 2)
+                GameOver();
+        }
+
+        private void ShowNotificationMsgs()
+        {
+            missionsSo.Persist(MissionType.CURRENT_SPACESHIPS_PLAYING, 2-deadPlayersCount);
+            missionsSo.Increment(MissionType.TOTAL_GAME_PLAYED, Time.time - initialPlayTime);
+            missionsSo.Persist(MissionType.TOTAL_GAME_PLAYED_IN_CURRENT_GAME, Time.time - initialPlayTime);
+
+            Mission mission;
+            if (missionsSo.FindCompletedMissions(out mission))
+            {
+                this.notificationMsgsPanel.ShowMessage(mission.ToString());
+            }
         }
     }
 }

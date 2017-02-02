@@ -1,75 +1,78 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(LineRenderer))]
-public class ManualTrail : MonoBehaviour
+namespace Assets.Scripts
 {
-    [SerializeField]
-    private int trailResolution;
-
-    private LineRenderer lineRenderer;
-    private Vector3[] lineSegmentPositions;
-    private Vector3[] lineSegmentVelocities;
-
-    // This would be the distance between the individual points of the line renderer
-    [SerializeField]
-    private float offset;
-
-    private Vector3 facingDirection;
-
-    // How far the points 'lag' behind each other in terms of position
-    public float lagTime;
-
-    // Use this for initialization
-    void Start()
+    [RequireComponent(typeof(LineRenderer))]
+    public class ManualTrail : MonoBehaviour
     {
-        lineRenderer = GetComponent<LineRenderer>();
+        [SerializeField]
+        private int trailResolution;
 
-        lineRenderer.SetVertexCount(trailResolution);
+        private LineRenderer lineRenderer;
+        private Vector3[] lineSegmentPositions;
+        private Vector3[] lineSegmentVelocities;
 
-        lineSegmentPositions = new Vector3[trailResolution];
-        lineSegmentVelocities = new Vector3[trailResolution];
+        // This would be the distance between the individual points of the line renderer
+        [SerializeField]
+        private float offset;
 
-        facingDirection = transform.up;
+        private Vector3 facingDirection;
 
-        // Initialize our positions
-        for (int i = 0; i < lineSegmentPositions.Length; i++)
+        // How far the points 'lag' behind each other in terms of position
+        public float lagTime;
+
+        // Use this for initialization
+        void Start()
         {
-            lineSegmentPositions[i] = new Vector3();
-            lineSegmentVelocities[i] = new Vector3();
+            lineRenderer = GetComponent<LineRenderer>();
 
-            if (i == 0)
+            lineRenderer.SetVertexCount(trailResolution);
+
+            lineSegmentPositions = new Vector3[trailResolution];
+            lineSegmentVelocities = new Vector3[trailResolution];
+
+            facingDirection = transform.up;
+
+            // Initialize our positions
+            for (int i = 0; i < lineSegmentPositions.Length; i++)
             {
-                // Set the first position to be at the base of the transform
-                lineSegmentPositions[i] = transform.position;
-            }
-            else
-            {
-                // All subsequent positions would be an offset of the original position.
-                lineSegmentPositions[i] = transform.position + (facingDirection * (offset * i));
+                lineSegmentPositions[i] = new Vector3();
+                lineSegmentVelocities[i] = new Vector3();
+
+                if (i == 0)
+                {
+                    // Set the first position to be at the base of the transform
+                    lineSegmentPositions[i] = transform.position;
+                }
+                else
+                {
+                    // All subsequent positions would be an offset of the original position.
+                    lineSegmentPositions[i] = transform.position + (facingDirection * (offset * i));
+                }
             }
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        facingDirection = transform.up;
-
-        for (int i = 0; i < lineSegmentPositions.Length; i++)
+        // Update is called once per frame
+        void Update()
         {
-            if (i == 0)
-            {
-                // We always want the first position to be exactly at the original position
-                lineSegmentPositions[i] = transform.position;
-            }
-            else
-            {
-                // All others will follow the original with the offset that you set up
-                lineSegmentPositions[i] = Vector3.SmoothDamp(lineSegmentPositions[i], lineSegmentPositions[i - 1] + (facingDirection * offset), ref lineSegmentVelocities[i], lagTime);
-            }
+            facingDirection = transform.up;
 
-            // Once we're done calculating where our position should be, set the line segment to be in its proper place
-            lineRenderer.SetPosition(i, lineSegmentPositions[i]);
+            for (int i = 0; i < lineSegmentPositions.Length; i++)
+            {
+                if (i == 0)
+                {
+                    // We always want the first position to be exactly at the original position
+                    lineSegmentPositions[i] = transform.position;
+                }
+                else
+                {
+                    // All others will follow the original with the offset that you set up
+                    lineSegmentPositions[i] = Vector3.SmoothDamp(lineSegmentPositions[i], lineSegmentPositions[i - 1] + (facingDirection * offset), ref lineSegmentVelocities[i], lagTime);
+                }
+
+                // Once we're done calculating where our position should be, set the line segment to be in its proper place
+                lineRenderer.SetPosition(i, lineSegmentPositions[i]);
+            }
         }
     }
 }

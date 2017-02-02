@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace So
+namespace Assets.Scripts.So
 {
     [CreateAssetMenu(fileName = "SpaceshipsListSo", menuName = "Scriptable Object")]
     public class SpaceshipsListSo : ScriptableObject

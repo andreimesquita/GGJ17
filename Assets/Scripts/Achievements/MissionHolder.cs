@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Achievements
+namespace Assets.Scripts.Achievements
 {
     public class MissionHolder : MonoBehaviour
     {

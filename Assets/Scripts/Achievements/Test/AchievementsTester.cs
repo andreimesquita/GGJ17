@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Achievements.Test
+namespace Assets.Scripts.Achievements.Test
 {
     public class AchievementsTester : MonoBehaviour
     {

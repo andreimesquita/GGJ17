@@ -1,39 +1,43 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Managers;
+using UnityEngine;
 
-public class MobileInputController : MonoBehaviour
+namespace Assets.Scripts.Gameplay
 {
-    private bool holdingDownLeft;
-    private bool holdingDownRight;
-
-    public void OnRightScreenUp()
+    public class MobileInputController : MonoBehaviour
     {
-        this.holdingDownRight = false;
+        private bool holdingDownLeft;
+        private bool holdingDownRight;
 
-        GameManager.Instance.entities.spaceshipRight.spaceshipMove.ResetDirection();
-    }
+        public void OnRightScreenUp()
+        {
+            this.holdingDownRight = false;
 
-    public void OnLeftScreenUp()
-    {
-        this.holdingDownLeft = false;
+            GameManager.Instance.entities.spaceshipRight.spaceshipMove.ResetDirection();
+        }
 
-        GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ResetDirection();
-    }
+        public void OnLeftScreenUp()
+        {
+            this.holdingDownLeft = false;
 
-    public void OnRightScreenDown()
-    {
-        if (holdingDownRight) return;
+            GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ResetDirection();
+        }
 
-        this.holdingDownRight = true;
+        public void OnRightScreenDown()
+        {
+            if (holdingDownRight) return;
 
-        GameManager.Instance.entities.spaceshipRight.spaceshipMove.ReverseInitialDirection();
-    }
+            this.holdingDownRight = true;
 
-    public void OnLeftScreenDown()
-    {
-        if (holdingDownLeft) return;
+            GameManager.Instance.entities.spaceshipRight.spaceshipMove.ReverseInitialDirection();
+        }
 
-        this.holdingDownLeft = true;
+        public void OnLeftScreenDown()
+        {
+            if (holdingDownLeft) return;
 
-        GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ReverseInitialDirection();
+            this.holdingDownLeft = true;
+
+            GameManager.Instance.entities.spaceshipLeft.spaceshipMove.ReverseInitialDirection();
+        }
     }
 }

@@ -1,19 +1,22 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class EntitiesManager : MonoBehaviour
+namespace Assets.Scripts.Managers
 {
-    public SpaceshipBehaviour spaceshipLeft;
-    public SpaceshipBehaviour spaceshipRight;
-    public Text scoreText;
-
-    public void RespawnPlayers()
+    public class EntitiesManager : MonoBehaviour
     {
-        spaceshipLeft.transform.position = Vector3.right * 1f;
-        spaceshipRight.transform.position = Vector3.right * -1f;
+        public SpaceshipBehaviour spaceshipLeft;
+        public SpaceshipBehaviour spaceshipRight;
+        public Text scoreText;
 
-        spaceshipLeft.gameObject.SetActive(true);
-        spaceshipRight.gameObject.SetActive(true);
+        public void RespawnPlayers()
+        {
+            spaceshipLeft.transform.position = Vector3.right * 1f;
+            spaceshipRight.transform.position = Vector3.right * -1f;
+
+            spaceshipLeft.gameObject.SetActive(true);
+            spaceshipRight.gameObject.SetActive(true);
+        }
+
     }
-
 }

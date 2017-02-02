@@ -1,12 +1,15 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Util;
+using UnityEngine;
 using UnityEngine.SceneManagement;
-using Util;
 
-public class MissionSceneManager : MonoBehaviour
+namespace Assets.Scripts.Managers
 {
-	private void Update ()
+    public class MissionSceneManager : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene(Constants.SCENE_ID_MAIN_MENU);
-	}
+        private void Update ()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                SceneManager.LoadScene(Constants.SCENE_ID_MAIN_MENU);
+        }
+    }
 }

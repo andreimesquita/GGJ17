@@ -1,41 +1,45 @@
-﻿using So;
+﻿using Assets.Scripts.Managers;
+using Assets.Scripts.So;
+using Assets.Scripts.Util;
 using UnityEngine;
-using Util;
 
-[RequireComponent(typeof(SpriteRenderer))]
-public class SpaceshipBehaviour : MonoBehaviour
+namespace Assets.Scripts
 {
-    [SerializeField] private int playerId;
-    [SerializeField] private SpaceshipsListSo spaceshipsListSo;
-    [SerializeField] private ParticleSystem explosionEffect;
-
-    public SpaceshipMove spaceshipMove;
-
-    private void Awake()
+    [RequireComponent(typeof(SpriteRenderer))]
+    public class SpaceshipBehaviour : MonoBehaviour
     {
-        spaceshipMove = GetComponent<SpaceshipMove>();
+        [SerializeField] private int playerId;
+        [SerializeField] private SpaceshipsListSo spaceshipsListSo;
+        [SerializeField] private ParticleSystem explosionEffect;
 
-        int selectedSpaceshipId;
+        public SpaceshipMove spaceshipMove;
 
-        if (playerId == 0)
-            selectedSpaceshipId = PlayerPrefs.GetInt(Constants.KEY_PLAYER_ONE_ID);
-        else
-            selectedSpaceshipId = PlayerPrefs.GetInt(Constants.KEY_PLAYER_TWO_ID);
+        private void Awake()
+        {
+            spaceshipMove = GetComponent<SpaceshipMove>();
 
-        GetComponent<SpriteRenderer>().sprite = spaceshipsListSo.spaceshipsSprites[selectedSpaceshipId];
-    }
+            int selectedSpaceshipId;
 
-    private void OnCollisionEnter(Collision other)
-    {
-        GameManager.Instance.NotifyPlayerDead();
+            if (playerId == 0)
+                selectedSpaceshipId = PlayerPrefs.GetInt(Constants.KEY_PLAYER_ONE_ID);
+            else
+                selectedSpaceshipId = PlayerPrefs.GetInt(Constants.KEY_PLAYER_TWO_ID);
 
-        ParticleSystem explosion = Instantiate(this.explosionEffect) as ParticleSystem;
+            GetComponent<SpriteRenderer>().sprite = spaceshipsListSo.spaceshipsSprites[selectedSpaceshipId];
+        }
 
-        explosion.transform.position = this.transform.position;
-        explosion.Play();
+        private void OnCollisionEnter(Collision other)
+        {
+            GameManager.Instance.NotifyPlayerDead();
 
-        Destroy(explosion.gameObject, explosion.main.duration);
+            ParticleSystem explosion = Instantiate(this.explosionEffect) as ParticleSystem;
 
-        this.gameObject.SetActive(false);
+            explosion.transform.position = this.transform.position;
+            explosion.Play();
+
+            Destroy(explosion.gameObject, explosion.main.duration);
+
+            this.gameObject.SetActive(false);
+        }
     }
 }

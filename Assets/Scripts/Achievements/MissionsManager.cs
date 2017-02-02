@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Achievements
+namespace Assets.Scripts.Achievements
 {
     public class MissionsManager : MonoBehaviour
     {

@@ -1,12 +1,15 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Util;
+using UnityEngine;
 using UnityEngine.SceneManagement;
-using Util;
 
-public class CreditsManager : MonoBehaviour
+namespace Assets.Scripts.Managers
 {
-    private void Update()
+    public class CreditsManager : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene(Constants.SCENE_ID_MAIN_MENU);
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                SceneManager.LoadScene(Constants.SCENE_ID_MAIN_MENU);
+        }
     }
 }

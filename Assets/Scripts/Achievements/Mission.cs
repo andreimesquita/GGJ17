@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using SmartLocalization;
 using UnityEngine;
 
-namespace Achievements
+namespace Assets.Scripts.Achievements
 {
     [Serializable]
     public class SwKeyValuePair

@@ -1,68 +1,71 @@
 ﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class SpawnManager : MonoBehaviour
+namespace Assets.Scripts.Managers
 {
-    [SerializeField]
-    private GameObject asteroidPrefab;
-
-    [Header("Position"), SerializeField, Range(0, 4)]
-    private float spawnXSpacement;
-
-    [Header("Spawn Configurations")]
-    [SerializeField, Range(0, 5)]
-    private float spawnDelay = 1;
-
-    [SerializeField, Range(.05f, 2f)]
-    private float minAsteroidScale, maxAsteroidScale;
-
-    private float lastGameSpawnTime = 0;
-
-    private void Awake()
+    public class SpawnManager : MonoBehaviour
     {
-        if (!asteroidPrefab)
-            Debug.LogError("'asteroidPrefab' not assigned!", this);
-    }
+        [SerializeField]
+        private GameObject asteroidPrefab;
 
-    private void OnEnable()
-    {
-        lastGameSpawnTime = Time.time;
-    }
+        [Header("Position"), SerializeField, Range(0, 4)]
+        private float spawnXSpacement;
 
-    private void Update()
-    {
-        if (Time.time - lastGameSpawnTime >= spawnDelay)
+        [Header("Spawn Configurations")]
+        [SerializeField, Range(0, 5)]
+        private float spawnDelay = 1;
+
+        [SerializeField, Range(.05f, 2f)]
+        private float minAsteroidScale, maxAsteroidScale;
+
+        private float lastGameSpawnTime = 0;
+
+        private void Awake()
         {
-            GameObject newAsteroid = SpawnNewAsteroid();
+            if (!asteroidPrefab)
+                Debug.LogError("'asteroidPrefab' not assigned!", this);
+        }
 
-            //Randomizes the asteroid's position
-            newAsteroid.transform.position = transform.position + Vector3.right * Random.Range(-spawnXSpacement, spawnXSpacement);
-
-            //Randomizes the asteroid's scale
-            newAsteroid.transform.localScale = Vector3.one * Random.Range(minAsteroidScale, maxAsteroidScale);
-
-            //Randomizes the asteroid's rotation
-            newAsteroid.transform.localRotation = 
-                Quaternion.Euler(
-                    Random.Range(-180, 180), 
-                    Random.Range(-180, 180), 
-                    Random.Range(-180, 180));
-
+        private void OnEnable()
+        {
             lastGameSpawnTime = Time.time;
         }
-    }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
+        private void Update()
+        {
+            if (Time.time - lastGameSpawnTime >= spawnDelay)
+            {
+                GameObject newAsteroid = SpawnNewAsteroid();
 
-        Gizmos.DrawLine(transform.position + -Vector3.right * spawnXSpacement,
-                        transform.position + Vector3.right * spawnXSpacement);
-    }
+                //Randomizes the asteroid's position
+                newAsteroid.transform.position = transform.position + Vector3.right * Random.Range(-spawnXSpacement, spawnXSpacement);
 
-    private GameObject SpawnNewAsteroid()
-    {
-        //TODO: Implement a descent spawn system
-        return Instantiate(asteroidPrefab);
+                //Randomizes the asteroid's scale
+                newAsteroid.transform.localScale = Vector3.one * Random.Range(minAsteroidScale, maxAsteroidScale);
+
+                //Randomizes the asteroid's rotation
+                newAsteroid.transform.localRotation = 
+                    Quaternion.Euler(
+                        Random.Range(-180, 180), 
+                        Random.Range(-180, 180), 
+                        Random.Range(-180, 180));
+
+                lastGameSpawnTime = Time.time;
+            }
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+
+            Gizmos.DrawLine(transform.position + -Vector3.right * spawnXSpacement,
+                transform.position + Vector3.right * spawnXSpacement);
+        }
+
+        private GameObject SpawnNewAsteroid()
+        {
+            //TODO: Implement a descent spawn system
+            return Instantiate(asteroidPrefab);
+        }
     }
 }

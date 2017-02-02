@@ -872,7 +872,7 @@ Prefab:
     - target: {fileID: 224526424201475360, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 200
+      value: 188.61865
       objectReference: {fileID: 0}
     - target: {fileID: 224526424201475360, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
@@ -882,7 +882,7 @@ Prefab:
     - target: {fileID: 224526424201475360, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 377.2373
       objectReference: {fileID: 0}
     - target: {fileID: 224526424201475360, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
@@ -902,7 +902,7 @@ Prefab:
     - target: {fileID: 224446172648721042, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 600
+      value: 565.85596
       objectReference: {fileID: 0}
     - target: {fileID: 224446172648721042, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
@@ -912,7 +912,7 @@ Prefab:
     - target: {fileID: 224446172648721042, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 377.2373
       objectReference: {fileID: 0}
     - target: {fileID: 224446172648721042, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
@@ -1043,6 +1043,21 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnResetGamePress
+      objectReference: {fileID: 0}
+    - target: {fileID: 114651726089198490, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
+        type: 2}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114651726089198490, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
+        type: 2}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114651726089198490, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
+        type: 2}
+      propertyPath: m_ReferenceResolution.y
+      value: 1280
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1, type: 2}

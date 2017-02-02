@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Assets.Scripts.Managers;
 using DG.Tweening;
 using UnityEngine;
 
@@ -74,11 +75,9 @@ namespace Assets.Scripts
             Quaternion lastRotation = this.transform.rotation;
             Quaternion deltaRotation = Quaternion.Slerp(lastRotation, maximumSteeringQuaternion, velocityRatio * steeringDumping);
 
-            Camera cam = Camera.main;
-            float height = 2f * cam.orthographicSize;
-            float width = height * cam.aspect;
-            float max = width * 0.5f;
+            float max = SpawnManager.MAX_X_POS;
             float min = -max;
+
             Vector3 position = this.transform.position;
             position.x = Mathf.Clamp(deltaPosition.x, min, max);
 

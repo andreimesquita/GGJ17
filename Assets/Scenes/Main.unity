@@ -160,6 +160,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114896380931156656, guid: 938684366ac431444ba672a5a3fb5b98,
+        type: 2}
+      propertyPath: spawnXSpacement
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 938684366ac431444ba672a5a3fb5b98, type: 2}
   m_IsPrefabParent: 0
@@ -239,7 +244,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
@@ -507,11 +512,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4915569735683906, guid: 243a82d9614a8b346a0282a472cd3773, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 400
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4915569735683906, guid: 243a82d9614a8b346a0282a472cd3773, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 541
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4915569735683906, guid: 243a82d9614a8b346a0282a472cd3773, type: 2}
       propertyPath: m_LocalPosition.z
@@ -872,7 +877,7 @@ Prefab:
     - target: {fileID: 224526424201475360, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 188.61865
+      value: 179.85948
       objectReference: {fileID: 0}
     - target: {fileID: 224526424201475360, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
@@ -882,7 +887,7 @@ Prefab:
     - target: {fileID: 224526424201475360, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 377.2373
+      value: 359.71896
       objectReference: {fileID: 0}
     - target: {fileID: 224526424201475360, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
@@ -902,7 +907,7 @@ Prefab:
     - target: {fileID: 224446172648721042, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 565.85596
+      value: 539.5784
       objectReference: {fileID: 0}
     - target: {fileID: 224446172648721042, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
@@ -912,7 +917,7 @@ Prefab:
     - target: {fileID: 224446172648721042, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 377.2373
+      value: 359.71896
       objectReference: {fileID: 0}
     - target: {fileID: 224446172648721042, guid: 32ea12bfb1f60fd4bb4828ff0e2dbcf1,
         type: 2}

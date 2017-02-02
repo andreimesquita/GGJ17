@@ -8,8 +8,10 @@ namespace Assets.Scripts.Managers
         [SerializeField]
         private GameObject asteroidPrefab;
 
-        [Header("Position"), SerializeField, Range(0, 4)]
-        private float spawnXSpacement;
+        public static float MAX_X_POS
+        {
+            get { return Camera.main.aspect * 5; }
+        }
 
         [Header("Spawn Configurations")]
         [SerializeField, Range(0, 5)]
@@ -38,7 +40,7 @@ namespace Assets.Scripts.Managers
                 GameObject newAsteroid = SpawnNewAsteroid();
 
                 //Randomizes the asteroid's position
-                newAsteroid.transform.position = transform.position + Vector3.right * Random.Range(-spawnXSpacement, spawnXSpacement);
+                newAsteroid.transform.position = transform.position + Vector3.right * Random.Range(-MAX_X_POS, MAX_X_POS);
 
                 //Randomizes the asteroid's scale
                 newAsteroid.transform.localScale = Vector3.one * Random.Range(minAsteroidScale, maxAsteroidScale);
@@ -58,8 +60,15 @@ namespace Assets.Scripts.Managers
         {
             Gizmos.color = Color.green;
 
-            Gizmos.DrawLine(transform.position + -Vector3.right * spawnXSpacement,
-                transform.position + Vector3.right * spawnXSpacement);
+            float spacement = MAX_X_POS;
+
+            if (!Application.isPlaying)
+            {
+                spacement *= Camera.main.aspect;
+            }
+
+            Gizmos.DrawLine(transform.position + -Vector3.right * spacement,
+                transform.position + Vector3.right * spacement);
         }
 
         private GameObject SpawnNewAsteroid()

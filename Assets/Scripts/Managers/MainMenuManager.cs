@@ -28,6 +28,15 @@ namespace Assets.Scripts.Managers
             SceneManager.LoadScene(Constants.SCENE_ID_ACHIEVEMENTS);
         }
 
+        public void OnLanguagePressed()
+        {
+            //Delete the key into PlayerPrefs
+            PlayerPrefs.DeleteKey(Constants.CURRENT_LANGUAGE_CODE_KEY);
+
+            //Return to the LanguageSelection' scene
+            SceneManager.LoadScene(Constants.SCENE_ID_LANGUAGE_SELECTION);
+        }
+
         public void OnCreditsPressed()
         {
             SceneManager.LoadScene(Constants.SCENE_ID_CREDITS);

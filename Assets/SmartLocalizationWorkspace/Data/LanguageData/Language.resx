@@ -194,4 +194,7 @@
 	<data name="Travel600Total.PresentationText.Key" xml:space="preserve">
 		<value>Travel 10 minutes in total</value>
 	</data>
+	<data name="MainMenu.Language.Key" xml:space="preserve">
+		<value>MainMenu -&gt; Language Button</value>
+	</data>
 </root>

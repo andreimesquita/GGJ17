@@ -153,6 +153,9 @@
 	<data name="MainMenu.Exit.Key" xml:space="preserve">
 		<value>SAIR</value>
 	</data>
+	<data name="MainMenu.Language.Key" xml:space="preserve">
+		<value>LINGUAGEM</value>
+	</data>
 	<data name="MainMenu.Missions.Key" xml:space="preserve">
 		<value>MISSÕES</value>
 	</data>

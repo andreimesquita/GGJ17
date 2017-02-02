@@ -30,18 +30,21 @@ namespace Assets.Scripts.Util
             }
         }
 
-        public void SwitchLanguage(Language newLanguage)
+        public virtual void SwitchLanguage(Language newLanguage)
         {
             string languageString = LanguageHelper.ParseLanguage(newLanguage);
 
             LanguageManager.Instance.defaultLanguage = languageString;
 
             LanguageManager.Instance.ChangeLanguage(languageString);
+
+            OnLanguageSwitched(languageString);
         }
 
-        private void Start()
-        {
+        protected virtual void OnLanguageSwitched(string languageCode) { }
 
+        protected virtual void Start()
+        {
             LanguageManager.SetDontDestroyOnLoad();
 
 #if ANDROID

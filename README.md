@@ -9,3 +9,6 @@
 - Guilherme Quadros da Silva - https://github.com/guiquadros
 - Andrei Shuch - https://github.com/andreimesquita
 - Pablo Parada - https://github.com/pabloparada
+
+**Tools used:**
+- Unity 5.5.1f1

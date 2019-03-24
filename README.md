@@ -4,3 +4,8 @@
 - Available in Google Play Store: https://play.google.com/store/apps/details?id=com.ggj17.spacewave&hl=en
 - Video: https://youtu.be/W21KNkg4CQ0
 - Link of the Game in the GGJ17 (source code and .apk): http://globalgamejam.org/2017/games/space-wave-0
+
+**Developers:**
+- Guilherme Quadros da Silva - https://github.com/guiquadros
+- Andrei Shuch - https://github.com/andreimesquita
+- Pablo Parada - https://github.com/pabloparada
